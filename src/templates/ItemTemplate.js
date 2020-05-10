@@ -11,10 +11,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import "../styles/layout.css"
 import FullScreenItem from "../components/FullScreenItem"
 
-const MenuItem = props => {
-  console.log({ props })
+const ItemTemplate = props => {
   const item = props.pathContext && props.pathContext.item
-  if (!item) return null //TODO loader
+  if (!item) return null //TODO back page
   return (
     <div className="bg-green-200 w-screen min-h-screen">
       <FullScreenItem item={item} />
@@ -22,4 +21,4 @@ const MenuItem = props => {
   )
 }
 
-export default MenuItem
+export default ItemTemplate

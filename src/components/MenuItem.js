@@ -50,7 +50,7 @@ function MenuItem({ className, item }: Props) {
 
   return (
     <div {...hoverProps} className={classnames("relative", className)}>
-      <Link to={linkFromName(name)}>
+      <Link className="underline" to={linkFromName(name)}>
         <span> {name} </span>
         {time && <span> ({time}) </span>}
       </Link>
