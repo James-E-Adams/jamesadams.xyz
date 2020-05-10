@@ -1,4 +1,4 @@
-const jeruFy = (pgNo: number) => `Jerusalem by Ottolenghi, pg ${pgNo}.`
+const jeruFy = pgNo => `Jerusalem by Ottolenghi, pg ${pgNo}.`
 
 const phoebe = "Phoebe's brain"
 export default [
@@ -6,6 +6,13 @@ export default [
     name: "Shakshuka",
     description: "Tomato-ey, peppery goodness.",
     source: jeruFy(66),
+    time: "30 minutes",
+  },
+  {
+    name: "Homemade Pizza",
+    description: "I guess everything on this list is homemade. ",
+    source: "https://www.thermo.kitchen/basic-thermomix-pizza-dough-recipe/",
+    image: "pizza.jpg",
     time: "30 minutes",
   },
   {

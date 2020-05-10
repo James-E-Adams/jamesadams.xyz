@@ -1,7 +1,16 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const dinner = require("./dinner")
+const path = require(`path`)
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  dinner.forEach(item => {
+    createPage({
+      component: path.resolve(`./src/templates/MenuItem.js`),
+      path: `dish/${item.name.replace(" ", "-")}`,
+      context: {
+        item,
+      },
+    })
+  })
+}

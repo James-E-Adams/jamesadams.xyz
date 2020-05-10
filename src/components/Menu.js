@@ -5,10 +5,13 @@ import classnames from "classnames"
 
 import Section from "./Section"
 import dinner from "../dinner"
-
+import ColumnThree from "./ColumnThree"
+import { ItemContext } from "../contexts/itemContext"
 type Props = {|
   +className?: string,
 |}
+
+const { useMemo, useState } = React
 
 const breakfast = [
   {
@@ -29,19 +32,30 @@ const breakfast = [
   },
 ]
 
+function useItemState() {
+  const [item, setItem] = useState(null)
+  const itemContextValue = useMemo(() => ({ item, setItem }), [item, setItem])
+  return itemContextValue
+}
+
 function Menu({ className }: Props) {
+  const itemState = useItemState()
+
   return (
-    <div className={classnames("w-screen bg-green-200", className)}>
-      <h1 className="w-full text-center pt-2"> Menu de los beps</h1>
-      <div className="flex flex-wrap px-4 -mt-4">
-        <Section
-          title="Breakfast"
-          className="w-80 mt-4 mr-4"
-          items={breakfast}
-        />
-        <Section title="Lunch/Dinner" className="w-80 mt-4" items={dinner} />
+    <ItemContext.Provider value={itemState}>
+      <div className={classnames("w-screen bg-green-200", className)}>
+        <h1 className="w-full text-center pt-2"> Menu de los beps</h1>
+        <div className="flex flex-wrap px-4 -mt-4">
+          <Section
+            title="Breakfast"
+            className="w-80 mt-4 mr-4"
+            items={breakfast}
+          />
+          <Section title="Lunch/Dinner" className="w-80 mt-4" items={dinner} />
+          <ColumnThree />
+        </div>
       </div>
-    </div>
+    </ItemContext.Provider>
   )
 }
 
