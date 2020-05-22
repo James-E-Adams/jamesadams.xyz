@@ -6,13 +6,14 @@ import { useItemContext } from "../contexts/itemContext"
 
 type Props = {|
   +className?: string,
+  +style?: Object,
 |}
 
-function ColumnThree({ className }: Props) {
+function ColumnThree({ className, style }: Props) {
   const { item } = useItemContext()
   if (!item) return null
   return (
-    <div className={classnames("", className)}>
+    <div style={style} className={classnames("", className)}>
       {item.image && <img src={`/food/${item.image}`} style={{ width: 300 }} />}
     </div>
   )

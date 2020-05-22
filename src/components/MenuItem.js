@@ -43,7 +43,6 @@ function MenuItem({ className, item }: Props) {
   const { item: contextItem, setItem } = useItemContext()
   React.useEffect(() => {
     if (item !== contextItem && isHovering) {
-      console.log("setting to item ", item.name) //TODO
       setItem(item)
     }
   }, [isHovering])

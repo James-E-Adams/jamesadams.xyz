@@ -4,33 +4,17 @@ import * as React from "react"
 import classnames from "classnames"
 
 import Section from "./Section"
-import dinner from "../dinner"
+import dinner from "../dishes/dinner"
+import breakfast from "../dishes/breakfast"
+import snacks from "../dishes/snacks"
 import ColumnThree from "./ColumnThree"
 import { ItemContext } from "../contexts/itemContext"
+
 type Props = {|
   +className?: string,
 |}
 
 const { useMemo, useState } = React
-
-const breakfast = [
-  {
-    name: "Porridge",
-    description:
-      "Thermomix porridge with banana, nut butter, cinammon and berries.",
-    time: "10 minutes",
-  },
-  {
-    name: "Pancakes",
-    description: "Most likely from a shaker",
-    time: "20 minutes",
-  },
-  {
-    name: "Omelette",
-    description: "Variety of stuffings. Yummy.",
-    time: "20 minutes",
-  },
-]
 
 function useItemState() {
   const [item, setItem] = useState(null)
@@ -38,21 +22,34 @@ function useItemState() {
   return itemContextValue
 }
 
+const imagePosition = { top: 50, right: 50 }
 function Menu({ className }: Props) {
   const itemState = useItemState()
 
   return (
     <ItemContext.Provider value={itemState}>
-      <div className={classnames("w-screen bg-green-200", className)}>
-        <h1 className="w-full text-center pt-2"> Menu de los beps</h1>
-        <div className="flex flex-wrap px-4 -mt-4">
-          <Section
-            title="Breakfast"
-            className="w-80 mt-4 mr-4"
-            items={breakfast}
-          />
-          <Section title="Lunch/Dinner" className="w-80 mt-4" items={dinner} />
-          <ColumnThree />
+      <div
+        className={classnames(
+          "w-screen bg-green-200 min-h-screen relative",
+          className
+        )}
+      >
+        <h1 className="w-full text-center pt-2"> Menu</h1>
+        <div className="flex px-4 -mt-4">
+          <div>
+            <Section
+              title="Breakfast"
+              className="w-80 mt-4 mr-4"
+              items={breakfast}
+            />
+            <Section
+              title="Lunch/Dinner"
+              className="w-80 mt-4"
+              items={dinner}
+            />
+            <Section title="Snacks" className="mt-4 w-80" items={snacks} />
+          </div>
+          <ColumnThree className="fixed" style={imagePosition} />
         </div>
       </div>
     </ItemContext.Provider>
