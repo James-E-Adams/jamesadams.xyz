@@ -4,6 +4,7 @@ const phoebe = "Phoebe's brain"
 
 module.exports = [
   {
+    id: 1,
     name: "Shakshuka",
     description: "Tomato-ey, peppery goodness.",
     source: jeruFy(66),
@@ -11,6 +12,7 @@ module.exports = [
     image: "shakshuka.jpg",
   },
   {
+    id: 2,
     name: "Homemade Pizza",
     description: "I guess everything on this list is homemade. ",
     source: "https://www.thermo.kitchen/basic-thermomix-pizza-dough-recipe/",
@@ -18,12 +20,14 @@ module.exports = [
     time: "30 minutes",
   },
   {
+    id: 3,
     name: "Basmati & Wild Rice with Chickpeas, Currants & Herbs",
     description: "Rice but yummier and more effort",
     source: jeruFy(106),
     time: "45 minutes",
   },
   {
+    id: 4,
     name: "Hot & Sour Soup",
     description:
       "It's in the name. Tofu, fungus and egg to make it thick, like chinese take-away.",
@@ -31,12 +35,14 @@ module.exports = [
     time: "20 minutes",
   },
   {
+    id: 5,
     name: "Japanese Curry",
     description: "Like the curry that comes with Katsu but vego.",
     source: phoebe,
     time: "1 hour",
   },
   {
+    id: 6,
     name: "Okonomiyaki",
     description: "Cabbage, carroty pancake. Optional noodles/egg.",
     image: "okonomiyaki.jpg",
@@ -44,6 +50,7 @@ module.exports = [
       "https://www.recipecommunity.com.au/main-dishes-vegetarian-recipes/japanese-okonomiyaki-vegetable-pancake/8tn57dr7-2ed4b-291708-cfcd2-h26z4zye",
   },
   {
+    id: 7,
     name: "Summer Squash and Basil pasta",
     description: "Simple but yum.",
     source:
@@ -51,6 +58,7 @@ module.exports = [
     time: "20 minutes",
   },
   {
+    id: 8,
     name: "Silken tofu mushroom pasta",
     description: "It's in the name.",
     source:
@@ -58,6 +66,7 @@ module.exports = [
     time: "30 minutes",
   },
   {
+    id: 9,
     name: "Stuffed peppers",
     description:
       "One of ottolenghi's finest. We haven't worked out a vego version yet.",
@@ -66,12 +75,14 @@ module.exports = [
     image: "stuffed_peppers.jpg",
   },
   {
+    id: 10,
     name: "Stir fried Daikin",
     description: "Phoebe classic",
     source: phoebe,
     time: "15 minutes",
   },
   {
+    id: 11,
     name: "Fish, baked/pan fried",
     description:
       "Salmon with crispy skin, or oat-crumbed, spicy ling are the top picks.",
@@ -79,6 +90,7 @@ module.exports = [
     time: "20-30 minutes",
   },
   {
+    id: 12,
     name: "Latkes",
     description: "It's like you fried a potato, and went to heaven.",
     source: "Mum or thermomix recipe",
@@ -86,6 +98,7 @@ module.exports = [
     image: "latkes.jpg",
   },
   {
+    id: 13,
     name: "Kimchi Fried Rice",
     description:
       "Use leftover rice. James thinks he didn't get any kimchi but we ate it all in the rice.",
@@ -93,6 +106,7 @@ module.exports = [
     time: "10 minutes",
   },
   {
+    id: 14,
     name: "Fried prawns",
     description:
       "On first eating it, James asked 'Who knew you could cook seafood at home?'. Delicious.",
@@ -100,6 +114,7 @@ module.exports = [
     time: "20 minutes",
   },
   {
+    id: 15,
     name: "Eggplant pasta",
     description:
       "From somewhere. Roasted Eggplant + Pasta. What could go wrong?",
@@ -107,6 +122,7 @@ module.exports = [
     time: "40 minutes",
   },
   {
+    id: 16,
     name: "Fried tofu cubes",
     description:
       "Our most popular entree. Stolen from NZ Nicole. Salt, oil and chili.",
@@ -115,29 +131,34 @@ module.exports = [
     image: "fried-tofu.jpg",
   },
   {
+    id: 17,
     name: "Ma-po tofu",
     description: "Spicy tofu. Yet to attempt sans mince meat.",
     time: "20 minutes",
   },
   {
+    id: 18,
     name: "Butternut squash with pumpkin seeds and cardamom",
     description: "",
     time: "1 hour",
     image: "pumpkin.jpg",
   },
   {
+    id: 19,
     name: "Mussels",
     description: "Fresh from QV Market.",
     time: "30 min",
     image: "mussels.jpg",
   },
   {
+    id: 20,
     name: "DIY Rice Vermicelli with extras",
     description: "Like going to a vietnames restaurant but more food.",
     time: "30 minutes",
     image: "vermicelli.jpg",
   },
   {
+    id: 21,
     name: "Chinese Fried Green Beans with Garlic",
     description: "Good with or sans bean curd.",
     time: "30 minutes",

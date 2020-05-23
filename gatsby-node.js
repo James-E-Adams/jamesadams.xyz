@@ -3,6 +3,7 @@ const path = require(`path`)
 const dinner = require("./dishes/dinner")
 const breakfast = require("./dishes/breakfast")
 const snacks = require("./dishes/snacks")
+const events = require("./events/events")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -15,8 +16,9 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   }
-  const meals = [dinner, breakfast, snacks]
-  meals.forEach(dishes => dishes.forEach(createDishPage))
+  const dishes = [...dinner, ...breakfast, ...snacks]
+  dishes.forEach(createDishPage)
+
   createPage({
     component: path.resolve("./src/templates/MenuTemplate.js"),
     path: "/",
@@ -26,4 +28,15 @@ exports.createPages = async ({ graphql, actions }) => {
       snacks,
     },
   })
+
+  events.forEach(event =>
+    createPage({
+      component: path.resolve("./src/templates/EventTemplate.js"),
+      path: `event/${event.name.replace(/\s/gi, "-")}`,
+      context: {
+        event,
+        dishes: event.dishes.map(id => dishes.find(dish => dish.id === id)),
+      },
+    })
+  )
 }
