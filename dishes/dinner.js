@@ -13,7 +13,7 @@ module.exports = [
   {
     name: "Homemade Pizza",
     description: "I guess everything on this list is homemade. ",
-    source: "https://www.thermo.kitchen/basic-thermomix-piz za-dough-recipe/",
+    source: "https://www.thermo.kitchen/basic-thermomix-pizza-dough-recipe/",
     image: "pizza.jpg",
     time: "30 minutes",
   },

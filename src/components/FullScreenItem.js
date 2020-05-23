@@ -31,6 +31,9 @@ function FullScreenItem({ className, item }: Props) {
         <div>
           <div> {description} </div>
           <div className="mt-2"> Takes {time} to cook. </div>
+          <a href={item.source} className="underline mt-16">
+            Source
+          </a>
         </div>
         {item.image && (
           <div>
