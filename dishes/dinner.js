@@ -135,6 +135,7 @@ module.exports = [
     name: "Ma-po tofu",
     description: "Spicy tofu. Yet to attempt sans mince meat.",
     time: "20 minutes",
+    source: "ummm",
   },
   {
     id: 18,
@@ -142,6 +143,7 @@ module.exports = [
     description: "",
     time: "1 hour",
     image: "pumpkin.jpg",
+    source: "Ottolenghi book, TODO",
   },
   {
     id: 19,
@@ -149,6 +151,7 @@ module.exports = [
     description: "Fresh from QV Market.",
     time: "30 min",
     image: "mussels.jpg",
+    source: phoebe,
   },
   {
     id: 20,
@@ -156,6 +159,7 @@ module.exports = [
     description: "Like going to a vietnames restaurant but more food.",
     time: "30 minutes",
     image: "vermicelli.jpg",
+    source: phoebe,
   },
   {
     id: 21,
@@ -163,5 +167,6 @@ module.exports = [
     description: "Good with or sans bean curd.",
     time: "30 minutes",
     image: "green-beans.jpg",
+    source: phoebe,
   },
 ]
