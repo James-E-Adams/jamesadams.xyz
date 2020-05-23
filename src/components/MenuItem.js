@@ -27,11 +27,13 @@ function MenuItem({ className, item }: Props) {
   }, [isHovering, contextItem, item, setItem])
 
   return (
-    <div {...hoverProps} className={classnames("relative", className)}>
-      <Link className="underline font-semibold" to={linkFromName(name)}>
-        <span> {name} </span>
-        {time && <span> ({time}) </span>}
-      </Link>
+    <div className={classnames("relative", className)}>
+      <div {...hoverProps}>
+        <Link className="underline font-semibold" to={linkFromName(name)}>
+          <span> {name} </span>
+          {time && <span> ({time}) </span>}
+        </Link>
+      </div>
       <div className="text-sm"> {description} </div>
     </div>
   )
