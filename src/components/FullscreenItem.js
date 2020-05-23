@@ -17,7 +17,7 @@ function FullScreenItem({ className, item }: Props) {
     // image
   } = item
   return (
-    <div className={classnames("", className)}>
+    <div className={classnames("w-screen min-h-screen relative", className)}>
       <div className="w-full pt-4 px-8 flex items-center justify-between">
         <Link to="/" className="underline">
           Back
@@ -25,9 +25,20 @@ function FullScreenItem({ className, item }: Props) {
         <div className="font-bold text-xl"> {name} </div>
         <div />
       </div>
-      <div className="pl-8 mt-8">
-        <div> {description} </div>
-        <div className="mt-2"> Takes {time} to cook. </div>
+      <div className="flex flex-wrap justify-between px-16 py-16">
+        <div>
+          <div> {description} </div>
+          <div className="mt-2"> Takes {time} to cook. </div>
+        </div>
+        {item.image && (
+          <div>
+            <img
+              src={`/food/${item.image}`}
+              alt={item.title}
+              style={{ width: 300 }}
+            />
+          </div>
+        )}
       </div>
     </div>
   )
