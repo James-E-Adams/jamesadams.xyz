@@ -1,6 +1,8 @@
+const path = require(`path`)
+
 const dinner = require("./dishes/dinner")
 const breakfast = require("./dishes/breakfast")
-const path = require(`path`)
+const snacks = require("./dishes/snacks")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -13,7 +15,15 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   }
-
-  dinner.forEach(createDishPage)
-  breakfast.forEach(createDishPage)
+  const meals = [dinner, breakfast, snacks]
+  meals.forEach(dishes => dishes.forEach(createDishPage))
+  createPage({
+    component: path.resolve("./src/templates/MenuTemplate.js"),
+    path: "/",
+    context: {
+      dinner,
+      breakfast,
+      snacks,
+    },
+  })
 }

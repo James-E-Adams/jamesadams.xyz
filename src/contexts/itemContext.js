@@ -2,7 +2,7 @@
 import * as React from "react"
 
 import type { Item } from "../types"
-type RecipeContextData = {|
+type ItemContextData = {|
   +item: Item,
   +setItem: (item: Item) => void,
 |}

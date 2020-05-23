@@ -4,9 +4,6 @@ import * as React from "react"
 import classnames from "classnames"
 
 import Section from "./Section"
-import dinner from "../dishes/dinner"
-import breakfast from "../dishes/breakfast"
-import snacks from "../dishes/snacks"
 import ColumnThree from "./ColumnThree"
 import { ItemContext } from "../contexts/itemContext"
 
@@ -23,9 +20,8 @@ function useItemState() {
 }
 
 const imagePosition = { top: 50, right: 50 }
-function Menu({ className }: Props) {
+function Menu({ className, dinner, breakfast, snacks }: Props) {
   const itemState = useItemState()
-
   return (
     <ItemContext.Provider value={itemState}>
       <div

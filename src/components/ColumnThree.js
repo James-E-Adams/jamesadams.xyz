@@ -14,7 +14,13 @@ function ColumnThree({ className, style }: Props) {
   if (!item) return null
   return (
     <div style={style} className={classnames("", className)}>
-      {item.image && <img src={`/food/${item.image}`} style={{ width: 300 }} />}
+      {item.image && (
+        <img
+          src={`/food/${item.image}`}
+          alt={item.title}
+          style={{ width: 300 }}
+        />
+      )}
     </div>
   )
 }

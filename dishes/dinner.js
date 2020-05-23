@@ -1,17 +1,19 @@
 const jeruFy = pgNo => `Jerusalem by Ottolenghi, pg ${pgNo}.`
 
 const phoebe = "Phoebe's brain"
+
 module.exports = [
   {
     name: "Shakshuka",
     description: "Tomato-ey, peppery goodness.",
     source: jeruFy(66),
     time: "30 minutes",
+    image: "shakshuka.jpg",
   },
   {
     name: "Homemade Pizza",
     description: "I guess everything on this list is homemade. ",
-    source: "https://www.thermo.kitchen/basic-thermomix-pizza-dough-recipe/",
+    source: "https://www.thermo.kitchen/basic-thermomix-piz za-dough-recipe/",
     image: "pizza.jpg",
     time: "30 minutes",
   },
@@ -37,6 +39,7 @@ module.exports = [
   {
     name: "Okonomiyaki",
     description: "Cabbage, carroty pancake. Optional noodles/egg.",
+    image: "okonomiyaki.jpg",
     source:
       "https://www.recipecommunity.com.au/main-dishes-vegetarian-recipes/japanese-okonomiyaki-vegetable-pancake/8tn57dr7-2ed4b-291708-cfcd2-h26z4zye",
   },
@@ -60,6 +63,7 @@ module.exports = [
       "One of ottolenghi's finest. We haven't worked out a vego version yet.",
     source: jeruFy(165),
     time: "1.5 hours",
+    image: "stuffed_peppers.jpg",
   },
   {
     name: "Stir fried Daikin",
@@ -79,6 +83,7 @@ module.exports = [
     description: "It's like you fried a potato, and went to heaven.",
     source: "Mum or thermomix recipe",
     time: "20-30 minutes",
+    image: "latkes.jpg",
   },
   {
     name: "Kimchi Fried Rice",
@@ -107,6 +112,7 @@ module.exports = [
       "Our most popular entree. Stolen from NZ Nicole. Salt, oil and chili.",
     time: "30 minutes",
     source: "Nicole (NZ)",
+    image: "fried-tofu.jpg",
   },
   {
     name: "Ma-po tofu",
@@ -117,5 +123,24 @@ module.exports = [
     name: "Butternut squash with pumpkin seeds and cardamom",
     description: "",
     time: "1 hour",
+    image: "pumpkin.jpg",
+  },
+  {
+    name: "Mussels",
+    description: "Fresh from QV Market.",
+    time: "30 min",
+    image: "mussels.jpg",
+  },
+  {
+    name: "DIY Rice Vermicelli with extras",
+    description: "Like going to a vietnames restaurant but more food.",
+    time: "30 minutes",
+    image: "vermicelli.jpg",
+  },
+  {
+    name: "Chinese Fried Green Beans with Garlic",
+    description: "Good with or sans bean curd.",
+    time: "30 minutes",
+    image: "green-beans.jpg",
   },
 ]

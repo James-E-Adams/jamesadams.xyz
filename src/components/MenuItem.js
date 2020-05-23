@@ -2,8 +2,7 @@
 
 import * as React from "react"
 import classnames from "classnames"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 import useHover from "react-use-hover"
 
 import type { Item } from "../types"
@@ -12,40 +11,17 @@ type Props = {|
   +item?: Item,
 |}
 
-function Image({ className, style }) {
-  const { pizza } = useStaticQuery(query)
-  return (
-    <Img
-      className={className}
-      fixed={pizza.childImageSharp.fixed}
-      style={{ position: "absolute", ...style }}
-    />
-  )
-}
-
-const query = graphql`
-  query {
-    pizza: file(relativePath: { eq: "food/pizza.jpg" }) {
-      childImageSharp {
-        fixed(width: 350) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
-
 const linkFromName = name => `/dish/${name.replace(" ", "-")}`
 
 function MenuItem({ className, item }: Props) {
-  const { name, description, time, image } = item
+  const { name, description, time } = item
   const [isHovering, hoverProps] = useHover()
   const { item: contextItem, setItem } = useItemContext()
   React.useEffect(() => {
     if (item !== contextItem && isHovering) {
       setItem(item)
     }
-  }, [isHovering])
+  }, [isHovering, contextItem, item, setItem])
 
   return (
     <div {...hoverProps} className={classnames("relative", className)}>

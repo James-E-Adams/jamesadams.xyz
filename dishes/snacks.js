@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   {
     name: "Chocolate Peanut Butter Protein Balls",
     description: "Yes",
