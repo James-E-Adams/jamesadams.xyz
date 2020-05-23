@@ -10,7 +10,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const createDishPage = item => {
     createPage({
       component: path.resolve(`./src/templates/ItemTemplate.js`),
-      path: `dish/${item.name.replace(" ", "-")}`,
+      path: `dish/${item.name.replace(/\s/gi, "-")}`,
       context: {
         item,
       },
@@ -39,4 +39,11 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   )
+  createPage({
+    component: path.resolve("./src/templates/AllEventsTemplate.js"),
+    path: "/events",
+    context: {
+      events,
+    },
+  })
 }

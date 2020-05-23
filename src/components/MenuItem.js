@@ -11,7 +11,7 @@ type Props = {|
   +item?: Item,
 |}
 
-const linkFromName = name => `/dish/${name.replace(" ", "-")}`
+const linkFromName = name => `/dish/${name.replace(/\s/gi, "-")}`
 
 function MenuItem({ className, item }: Props) {
   const { name, description, time } = item
