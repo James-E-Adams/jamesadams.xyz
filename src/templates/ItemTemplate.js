@@ -1,6 +1,7 @@
 import React from "react"
 
-import "src/styles/layout.css"
+import "src/styles/base.css"
+import "src/styles/reset.css"
 import FullScreenItem from "src/components/FullScreenItem"
 
 const ItemTemplate = props => {

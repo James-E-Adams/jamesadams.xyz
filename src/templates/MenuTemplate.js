@@ -7,7 +7,8 @@
 
 import React from "react"
 
-import "src/styles/layout.css"
+import "src/styles/base.css"
+import "src/styles/reset.css"
 import Menu from "src/components/Menu"
 import SEO from "src/components/seo"
 
