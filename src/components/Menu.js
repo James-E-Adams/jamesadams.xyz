@@ -6,6 +6,7 @@ import classnames from "classnames"
 import Section from "./Section"
 import ColumnThree from "./ColumnThree"
 import { ItemContext } from "src/contexts/itemContext"
+import BorderContainer from "./BorderContainer"
 
 type Props = {|
   +className?: string,
@@ -26,27 +27,29 @@ function Menu({ className, dinner, breakfast, snacks }: Props) {
     <ItemContext.Provider value={itemState}>
       <div
         className={classnames(
-          "w-screen bg-green-200 min-h-screen relative",
+          "w-screen bg-green-200 min-h-screen relative p-4",
           className
         )}
       >
-        <h1 className="w-full text-center pt-2"> Menu</h1>
-        <div className="flex px-4 -mt-4">
-          <div>
-            <Section
-              title="Breakfast"
-              className="w-80 mt-4 mr-4"
-              items={breakfast}
-            />
-            <Section
-              title="Lunch/Dinner"
-              className="w-80 mt-4"
-              items={dinner}
-            />
-            <Section title="Snacks" className="mt-4 w-80" items={snacks} />
+        <BorderContainer>
+          <div className="w-full text-center pt-2 text-5xl mb-8"> Menu</div>
+          <div className="flex px-4 -mt-4">
+            <div>
+              <Section
+                title="Breakfast"
+                className="w-80 mt-4 mr-4"
+                items={breakfast}
+              />
+              <Section
+                title="Lunch/Dinner"
+                className="w-80 mt-4"
+                items={dinner}
+              />
+              <Section title="Snacks" className="mt-4 w-80" items={snacks} />
+            </div>
+            <ColumnThree className="fixed" style={imagePosition} />
           </div>
-          <ColumnThree className="fixed" style={imagePosition} />
-        </div>
+        </BorderContainer>
       </div>
     </ItemContext.Provider>
   )

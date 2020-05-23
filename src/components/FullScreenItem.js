@@ -1,8 +1,7 @@
 // @flow
 
 import * as React from "react"
-import classnames from "classnames"
-// import Img from "gatsby-image"
+// import classnames from "classnames"
 import { Link } from "gatsby"
 import type { Item } from "src/types"
 type Props = {|
@@ -17,7 +16,7 @@ function FullScreenItem({ className, item }: Props) {
     // image
   } = item
   return (
-    <div className={classnames("w-screen min-h-screen relative", className)}>
+    <div>
       <div className="w-full pt-4 px-8 flex items-center justify-between">
         <Link to="/" className="underline">
           Back
