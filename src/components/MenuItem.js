@@ -5,8 +5,8 @@ import classnames from "classnames"
 import { Link } from "gatsby"
 import useHover from "react-use-hover"
 
-import type { Item } from "../types"
-import { useItemContext } from "../contexts/itemContext"
+import type { Item } from "src/types"
+import { useItemContext } from "src/contexts/itemContext"
 type Props = {|
   +item?: Item,
 |}

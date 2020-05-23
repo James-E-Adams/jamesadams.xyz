@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import classnames from "classnames"
-import { useItemContext } from "../contexts/itemContext"
+import { useItemContext } from "src/contexts/itemContext"
 
 type Props = {|
   +className?: string,

@@ -1,7 +1,7 @@
 import React from "react"
 
-import "../styles/layout.css"
-import FullScreenItem from "../components/FullScreenItem"
+import "src/styles/layout.css"
+import FullScreenItem from "src/components/FullScreenItem"
 
 const ItemTemplate = props => {
   const item = props.pageContext && props.pageContext.item

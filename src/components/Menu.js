@@ -5,7 +5,7 @@ import classnames from "classnames"
 
 import Section from "./Section"
 import ColumnThree from "./ColumnThree"
-import { ItemContext } from "../contexts/itemContext"
+import { ItemContext } from "src/contexts/itemContext"
 
 type Props = {|
   +className?: string,

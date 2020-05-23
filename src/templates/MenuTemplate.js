@@ -7,9 +7,9 @@
 
 import React from "react"
 
-import "../styles/layout.css"
-import Menu from "../components/Menu"
-import SEO from "../components/seo"
+import "src/styles/layout.css"
+import Menu from "src/components/Menu"
+import SEO from "src/components/seo"
 
 const MenuTemplate = ({ pageContext }) => {
   if (!pageContext) return null

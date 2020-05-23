@@ -4,7 +4,7 @@ import * as React from "react"
 import classnames from "classnames"
 // import Img from "gatsby-image"
 import { Link } from "gatsby"
-import type { Item } from "../types"
+import type { Item } from "src/types"
 type Props = {|
   +item?: Item,
 |}

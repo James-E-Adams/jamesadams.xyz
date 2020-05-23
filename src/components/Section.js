@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import classnames from "classnames"
-import type { Item } from "../types"
+import type { Item } from "src/types"
 import MenuItem from "./MenuItem"
 type Props = {|
   +className?: string,
