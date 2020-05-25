@@ -32,7 +32,7 @@ function Menu({ className, dinner, breakfast, snacks }: Props) {
         )}
       >
         <BorderContainer>
-          <div className="w-full text-center sm:pt-2 pt-8 text-5xl mb-16 sm:mb-8">
+          <div className="w-full text-center sm:pt-2 pt-8 text-3xl mb-16 sm:mb-8 font-bold">
             Menu
           </div>
           <div className="flex px-4 -mt-4">
