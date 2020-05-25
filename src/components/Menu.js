@@ -27,12 +27,14 @@ function Menu({ className, dinner, breakfast, snacks }: Props) {
     <ItemContext.Provider value={itemState}>
       <div
         className={classnames(
-          "w-screen bg-green-200 min-h-screen relative p-4",
+          "w-screen bg-green-200 min-h-screen relative sm:p-4 p-2",
           className
         )}
       >
         <BorderContainer>
-          <div className="w-full text-center pt-2 text-5xl mb-8"> Menu</div>
+          <div className="w-full text-center sm:pt-2 pt-8 text-5xl mb-16 sm:mb-8">
+            Menu
+          </div>
           <div className="flex px-4 -mt-4">
             <div>
               <Section
@@ -47,7 +49,10 @@ function Menu({ className, dinner, breakfast, snacks }: Props) {
               />
               <Section title="Snacks" className="mt-4 w-80" items={snacks} />
             </div>
-            <ColumnThree className="fixed" style={imagePosition} />
+            <ColumnThree
+              className="fixed sm:block hidden"
+              style={imagePosition}
+            />
           </div>
         </BorderContainer>
       </div>

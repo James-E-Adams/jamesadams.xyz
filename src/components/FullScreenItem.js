@@ -1,10 +1,11 @@
 // @flow
 
 import * as React from "react"
-// import classnames from "classnames"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
 import type { Item } from "src/types"
 import Source from "./Source"
+import { useIsMobile } from "src/lib/hooks/useBreakpoint"
 type Props = {|
   +item?: Item,
 |}
@@ -16,26 +17,39 @@ function FullScreenItem({ className, item }: Props) {
     time,
     // image
   } = item
+  const isMobile = useIsMobile()
+
   return (
     <div>
-      <div className="w-full pt-4 px-8 flex items-center justify-between">
-        <Link to="/" className="underline">
-          Back
+      <div className="w-full sm:pt-4 pt-2 sm:px-8 px-2 flex items-center justify-between">
+        <Link to="/" className="underline w-16">
+          <FontAwesomeIcon icon="arrow-left" />
         </Link>
         <div className="font-bold text-xl"> {name} </div>
-        <div />
+        <div className="w-16" />
       </div>
       <div
-        className="flex flex-wrap justify-between px-16 py-16"
-        style={{ height: 800 }}
+        className=" px-8 sm:py-16 pt-4"
+        style={isMobile ? { minHeight: "100vh" } : { height: 800 }}
       >
+        {Boolean(item.image && isMobile) && (
+          <div className="py-4">
+            <img
+              src={`/food/${item.image}`}
+              alt={item.title}
+              style={{ width: 500 }}
+            />
+          </div>
+        )}
         <div>
-          <div> {description} </div>
-          <div className="mt-2"> Takes {time} to cook. </div>
+          <div className="mb-6"> {description} </div>
+          <div className="mb-4">
+            Takes <span className="font-semibold">{time}</span> to cook.
+          </div>
           <Source source={item.source} className="mt-16" />
         </div>
-        {item.image && (
-          <div>
+        {Boolean(item.image && !isMobile) && (
+          <div className="mt-16">
             <img
               src={`/food/${item.image}`}
               alt={item.title}

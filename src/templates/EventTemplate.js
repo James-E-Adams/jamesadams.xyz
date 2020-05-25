@@ -5,6 +5,7 @@ import "src/styles/base.css"
 import "src/styles/reset.css"
 import EventItem from "src/components/EventItem"
 import BorderContainer from "../components/BorderContainer"
+import "src/lib/fontAwesome"
 
 const EventTemplate = props => {
   const event = props.pageContext && props.pageContext.event

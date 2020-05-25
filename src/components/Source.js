@@ -15,7 +15,9 @@ function Source({ source, className }: Props) {
       Source
     </a>
   ) : (
-    <div> Source: {source} </div>
+    <div>
+      <span className="font-semibold"> Source: </span> {source}
+    </div>
   )
 }
 

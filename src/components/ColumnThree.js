@@ -3,6 +3,7 @@
 import * as React from "react"
 import classnames from "classnames"
 import { useItemContext } from "src/contexts/itemContext"
+import { useIsMobile } from "src/lib/hooks/useBreakpoint"
 
 type Props = {|
   +className?: string,
@@ -11,7 +12,8 @@ type Props = {|
 
 function ColumnThree({ className, style }: Props) {
   const { item } = useItemContext()
-  if (!item) return null
+  const isMobile = useIsMobile()
+  if (!item || isMobile) return null
   return (
     <div style={style} className={classnames("", className)}>
       {item.image && (

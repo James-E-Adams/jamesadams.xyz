@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import classnames from "classnames"
+import { useIsMobile } from "../lib/hooks/useBreakpoint"
 
 type Props = {|
   +className?: string,
@@ -9,17 +10,25 @@ type Props = {|
 
 const borderStyle = {
   borderStyle: "ridge",
+}
+const desktopBorderStyle = {
+  ...borderStyle,
   boxShadow: "0 0 0 2rem grey",
+}
+const mobileBorderStyle = {
+  ...borderStyle,
+  boxShadow: "0 0 0 1rem grey",
 }
 
 function BorderContainer({ className, children }: Props) {
+  const isMobile = useIsMobile()
   return (
     <div
       className={classnames(
-        "border-dashed border-24 border-white p-4 rounded-lg",
+        "border-dashed sm:border-24 border-16 border-white sm:p-4 p-2 rounded-lg",
         className
       )}
-      style={borderStyle}
+      style={isMobile ? mobileBorderStyle : desktopBorderStyle}
     >
       {children}
     </div>

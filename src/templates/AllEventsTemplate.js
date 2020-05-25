@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import "src/styles/base.css"
 import "src/styles/reset.css"
-import FullScreenItem from "src/components/FullScreenItem"
 import BorderContainer from "../components/BorderContainer"
 
 const linkFromName = name => `/event/${name.replace(/\s/gi, "-")}`
