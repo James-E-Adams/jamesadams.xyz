@@ -7,7 +7,7 @@ import Section from "./Section"
 import ColumnThree from "./ColumnThree"
 import { ItemContext } from "src/contexts/itemContext"
 import BorderContainer from "./BorderContainer"
-
+import ChefSvg from "./assets/cooking.inline.svg"
 type Props = {|
   +className?: string,
 |}
@@ -32,8 +32,8 @@ function Menu({ className, dinner, breakfast, snacks }: Props) {
         )}
       >
         <BorderContainer>
-          <div className="w-full text-center sm:pt-2 pt-8 text-3xl mb-16 sm:mb-8 font-bold">
-            Menu
+          <div className="w-full flex items-center justify-center sm:pt-2 pt-4 text-3xl mb-8 font-bold">
+            <ChefSvg className="w-16 h-16" />
           </div>
           <div className="flex px-4 -mt-4">
             <div>

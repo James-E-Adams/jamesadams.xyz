@@ -10,14 +10,15 @@ type Props = {|
 
 const borderStyle = {
   borderStyle: "ridge",
+  borderColor: "#cdc6f6",
 }
 const desktopBorderStyle = {
   ...borderStyle,
-  boxShadow: "0 0 0 2rem grey",
+  boxShadow: "0 0 0 2rem #f6d6c6",
 }
 const mobileBorderStyle = {
   ...borderStyle,
-  boxShadow: "0 0 0 1rem grey",
+  boxShadow: "0 0 0 1rem #f6d6c6",
 }
 
 function BorderContainer({ className, children }: Props) {
