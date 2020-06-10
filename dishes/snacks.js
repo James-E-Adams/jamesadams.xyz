@@ -10,5 +10,6 @@ module.exports = [
     description: "But cheaper. With/without cocoa",
     time: "15 minutes",
     image: "almond-butter.jpg",
+    source: "https://www.thermomixdivarecipes.com/thermomix-almond-butter",
   },
 ]
