@@ -15,21 +15,25 @@ function FullScreenItem({ className, item }: Props) {
     name,
     description,
     time,
+    ingredients,
+    instructions,
     // image
   } = item
   const isMobile = useIsMobile()
 
   return (
     <div>
-      <div className="w-full pt-2 sm:px-8 px-2 flex items-center justify-between">
-        <Link to="/" className="underline w-16">
-          <FontAwesomeIcon icon="arrow-left" />
-        </Link>
-        <div className="font-bold text-xl"> {name} </div>
-        <div className="w-16" />
+      <div className="sm:px-8 px-2">
+        <div className="w-full pt-2 flex items-center justify-between border-b-2 border-black">
+          <Link to="/" className="underline w-16">
+            <FontAwesomeIcon icon="arrow-left" />
+          </Link>
+          <div className="font-bold text-xl"> {name} </div>
+          <div className="w-16" />
+        </div>
       </div>
       <div
-        className="px-8 sm:py-16 pt-4"
+        className="px-8 sm:py-16 pt-4 overflow-scroll"
         style={isMobile ? { minHeight: "100vh" } : { height: 800 }}
       >
         {Boolean(item.image && isMobile) && (
@@ -47,6 +51,27 @@ function FullScreenItem({ className, item }: Props) {
             Takes <span className="font-semibold">{time}</span> to cook.
           </div>
           <Source source={item.source} className="mt-16" />
+
+          {ingredients && (
+            <div className="mt-10">
+              <div className="font-bold"> Ingredients </div>
+              <ul className="list-disc">
+                {ingredients.map((ingredient, index) => (
+                  <li key={index}> {ingredient} </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {instructions && (
+            <div>
+              <div className="font-bold"> Instructions </div>
+              <ul className="list-decimal">
+                {instructions.map((instruction, index) => (
+                  <li key={index}> {instruction} </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
         {Boolean(item.image && !isMobile) && (
           <div className="mt-16">
