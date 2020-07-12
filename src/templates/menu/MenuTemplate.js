@@ -9,7 +9,7 @@ import React from "react"
 
 import "src/styles/base.css"
 import "src/styles/reset.css"
-import Menu from "src/components/Menu"
+import Menu from "src/components/menu/Menu"
 import SEO from "src/components/seo"
 import "src/lib/fontAwesome"
 

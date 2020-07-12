@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import classnames from "classnames"
-import { useIsMobile } from "../lib/hooks/useBreakpoint"
+import { useIsMobile } from "src/lib/hooks/useBreakpoint"
 
 type Props = {|
   +className?: string,

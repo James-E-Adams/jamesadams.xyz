@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react"
 
-import type { Item } from "src/types"
+import type { Item } from "src/types/menu"
 type ItemContextData = {|
   +item: Item,
   +setItem: (item: Item) => void,

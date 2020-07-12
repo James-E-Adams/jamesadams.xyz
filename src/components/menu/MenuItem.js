@@ -5,14 +5,14 @@ import classnames from "classnames"
 import { Link } from "gatsby"
 import useHover from "react-use-hover"
 
-import type { Item } from "src/types"
+import type { Item } from "src/types/menu"
 import useBreakpoint from "src/lib/hooks/useBreakpoint"
-import { useItemContext } from "src/contexts/itemContext"
+import { useItemContext } from "src/contexts/menu/itemContext"
 type Props = {|
   +item?: Item,
 |}
 
-const linkFromName = name => `/dish/${name.replace(/\s/gi, "-")}`
+const linkFromName = name => `/menu/dish/${name.replace(/\s/gi, "-")}`
 
 function MenuItem({ className, item }: Props) {
   const breakpoint = useBreakpoint()

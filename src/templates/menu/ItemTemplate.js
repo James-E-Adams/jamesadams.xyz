@@ -2,8 +2,8 @@ import React from "react"
 
 import "src/styles/base.css"
 import "src/styles/reset.css"
-import FullScreenItem from "src/components/FullScreenItem"
-import BorderContainer from "../components/BorderContainer"
+import FullScreenItem from "src/components/menu/FullScreenItem"
+import BorderContainer from "src/components/menu/BorderContainer"
 import "src/lib/fontAwesome"
 
 const ItemTemplate = props => {

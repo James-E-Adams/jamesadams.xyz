@@ -9,8 +9,8 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const createDishPage = item => {
     createPage({
-      component: path.resolve(`./src/templates/ItemTemplate.js`),
-      path: `dish/${item.name.replace(/\s/gi, "-")}`,
+      component: path.resolve(`./src/templates/menu/ItemTemplate.js`),
+      path: `/menu/dish/${item.name.replace(/\s/gi, "-")}`,
       context: {
         item,
       },
@@ -20,8 +20,8 @@ exports.createPages = async ({ graphql, actions }) => {
   dishes.forEach(createDishPage)
 
   createPage({
-    component: path.resolve("./src/templates/MenuTemplate.js"),
-    path: "/",
+    component: path.resolve("./src/templates/menu/MenuTemplate.js"),
+    path: "/menu",
     context: {
       dinner,
       breakfast,
@@ -31,8 +31,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
   events.forEach(event =>
     createPage({
-      component: path.resolve("./src/templates/EventTemplate.js"),
-      path: `event/${event.name.replace(/\s/gi, "-")}`,
+      component: path.resolve("./src/templates/menu/EventTemplate.js"),
+      path: `/menu/event/${event.name.replace(/\s/gi, "-")}`,
       context: {
         event,
         dishes: event.dishes.map(id => dishes.find(dish => dish.id === id)),
@@ -40,8 +40,8 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   )
   createPage({
-    component: path.resolve("./src/templates/AllEventsTemplate.js"),
-    path: "/events",
+    component: path.resolve("./src/templates/menu/AllEventsTemplate.js"),
+    path: "/menu/events",
     context: {
       events,
     },

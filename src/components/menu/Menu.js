@@ -2,10 +2,11 @@
 
 import * as React from "react"
 import classnames from "classnames"
+import { Link } from "gatsby"
 
 import Section from "./Section"
 import ColumnThree from "./ColumnThree"
-import { ItemContext } from "src/contexts/itemContext"
+import { ItemContext } from "src/contexts/menu/itemContext"
 import BorderContainer from "./BorderContainer"
 import ChefSvg from "./assets/cooking.inline.svg"
 type Props = {|
@@ -32,8 +33,12 @@ function Menu({ className, dinner, breakfast, snacks }: Props) {
         )}
       >
         <BorderContainer>
-          <div className="w-full flex items-center justify-center sm:pt-2 pt-4 text-3xl mb-8 font-bold">
+          <div className="w-full flex items-center justify-between sm:pt-2 pt-4 text-3xl mb-8 font-bold">
+            <Link className="w-4" to="/">
+              Back
+            </Link>
             <ChefSvg className="w-16 h-16" />
+            <div className="w-4" />
           </div>
           <div className="flex px-4 -mt-4">
             <div>

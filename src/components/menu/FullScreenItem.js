@@ -3,7 +3,7 @@
 import * as React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from "gatsby"
-import type { Item } from "src/types"
+import type { Item } from "src/types/menu"
 import Source from "./Source"
 import { useIsMobile } from "src/lib/hooks/useBreakpoint"
 type Props = {|
@@ -25,7 +25,7 @@ function FullScreenItem({ className, item }: Props) {
     <div>
       <div className="sm:px-8 px-2">
         <div className="w-full pt-2 flex items-center justify-between border-b-2 border-black">
-          <Link to="/" className="underline w-16">
+          <Link to="/menu" className="underline w-16">
             <FontAwesomeIcon icon="arrow-left" />
           </Link>
           <div className="font-bold text-xl"> {name} </div>

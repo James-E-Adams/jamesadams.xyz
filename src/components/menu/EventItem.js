@@ -2,7 +2,7 @@
 
 import * as React from "react"
 // import classnames from "classnames"
-import type { Item } from "src/types"
+import type { Item } from "src/types/menu"
 import Source from "./Source"
 type Props = {|
   +item?: Item,

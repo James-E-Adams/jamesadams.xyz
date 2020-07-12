@@ -2,9 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import "src/styles/base.css"
 import "src/styles/reset.css"
-import BorderContainer from "../components/BorderContainer"
+import BorderContainer from "src/components/menu/BorderContainer"
 
-const linkFromName = name => `/event/${name.replace(/\s/gi, "-")}`
+const linkFromName = name => `/menu/event/${name.replace(/\s/gi, "-")}`
 
 const Event = ({ event: { name, date } }) => (
   <Link to={linkFromName(name)} className="underline">
