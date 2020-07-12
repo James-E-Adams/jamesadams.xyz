@@ -1,7 +1,6 @@
 // @flow
 
 import * as React from "react"
-import classnames from "classnames"
 
 import { graphql } from "gatsby"
 import StandardTemplate from "./Standard"

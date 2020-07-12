@@ -1,11 +1,9 @@
-// @flow
-
 import * as React from "react"
 
 import StandardTemplate from "src/templates/Standard"
 
-function Index() {
+function About() {
   return <StandardTemplate />
 }
 
-export default Index
+export default About
