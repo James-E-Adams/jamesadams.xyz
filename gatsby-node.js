@@ -7,6 +7,39 @@ const events = require("./events/events")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+
+  menuBuildTimeTasks(createPage)
+  await postsBuildTimeTasks(createPage, graphql)
+}
+
+const postsBuildTimeTasks = async (createPage, graphql) => {
+  const result = await graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    console.error(result.errors)
+  }
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: path.resolve(`src/templates/post.js`),
+    })
+  })
+}
+
+const menuBuildTimeTasks = createPage => {
   const createDishPage = item => {
     createPage({
       component: path.resolve(`./src/templates/menu/ItemTemplate.js`),
