@@ -4,6 +4,9 @@ import * as React from "react"
 import classnames from "classnames"
 import SEO from "src/components/seo"
 import Header from "src/components/Header"
+
+import "src/styles/base.css"
+import "src/styles/reset.css"
 type Props = {|
   +className?: string,
   +children?: React.Node,
