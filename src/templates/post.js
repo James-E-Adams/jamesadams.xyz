@@ -16,12 +16,9 @@ function Post({ data, className }: Props) {
     <StandardTemplate>
       <div className="flex justify-center mt-20">
         <div className="w-4/5">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <h2 className="text-4xl font-bold mb-2">{frontmatter.title}</h2>
+          <h1>{frontmatter.date}</h1>
+          <div className="mt-6" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </div>
     </StandardTemplate>
