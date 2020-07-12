@@ -3,7 +3,7 @@
 import * as React from "react"
 
 import { graphql, Link } from "gatsby"
-import StandardTemplate from "src/Templates/Standard"
+import StandardTemplate from "src/templates/Standard"
 
 type Props = {|
   +className?: string,
