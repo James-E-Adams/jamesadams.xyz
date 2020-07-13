@@ -24,7 +24,7 @@ function Projects({ className }: Props) {
       <ContentContainer>
         <div className="text-3xl text-center">Some things I've worked on:</div>
         <ul className="list-inside list-disc pt-8">
-          <li>
+          <li className="mb-10">
             <Link href="https://up.com.au">Up</Link>: The best bank in
             Australia! I currently do lots of different computery things that
             help and hinder the development of Up, a pretty popular online bank
@@ -38,9 +38,10 @@ function Projects({ className }: Props) {
                 people were winning, jumping all across Australia and zooming in
                 on the cafes.
               </li>
+              <li className="font-bold">Secret projects 👀</li>
             </ul>
           </li>
-          <li>
+          <li className="mb-10">
             <Link
               href="https://www.drawboard.com/projects/"
               className="hover:underline font-bold"
@@ -71,7 +72,7 @@ function Projects({ className }: Props) {
             account/portfolio, you've used my code.
           </li>
         </ul>
-        <div className="mt-12 text-xl text-center">
+        <div className="mt-16 text-2xl text-center">
           And some unfininished hacks:
         </div>
         <ul className="list-inside list-disc pt-8">

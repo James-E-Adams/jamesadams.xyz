@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: "Chocolate Peanut Butter Protein Balls",
-    description: "Yes",
+    description: "Yes.",
     time: "15 minutes",
     image: "protein-balls.jpg",
   },

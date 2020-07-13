@@ -9,12 +9,13 @@ module.exports = [
   },
   {
     name: "Pancakes",
-    description: "Most likely from a shaker",
+    description:
+      "Most likely from a shaker. Correction: We have a few home recipes now! One day they'll make it here.",
     time: "20 minutes",
   },
   {
     name: "Omelette",
-    description: "Variety of stuffings. Yummy.",
+    description: "Apply heat to eggs + more.",
     time: "20 minutes",
     image: "omelette.jpg",
     source: "A childhood of monotalent cooking.",

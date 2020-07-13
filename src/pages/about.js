@@ -6,6 +6,7 @@ import ContentContainer from "../components/ContentContainer"
 const hobbies = [
   "climbing rocks of varying sizes, colours and types",
   "pedalling away my existential angst on a mountain bike",
+  "starting my journey to chess prodigy 20 years late",
   "experimenting in the kitchen",
 ]
 
@@ -62,6 +63,11 @@ function About() {
                 href="https://www.thecrag.com/climber/jamesadams"
               >
                 theCrag
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://lichess.org/@/james-adams">
+                lichess
               </a>
             </li>
             <li>

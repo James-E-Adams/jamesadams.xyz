@@ -22,7 +22,7 @@ module.exports = [
   {
     id: 3,
     name: "Basmati & Wild Rice with Chickpeas, Currants & Herbs",
-    description: "Rice but yummier and more effort",
+    description: "Rice but yummier and more effort.",
     source: jeruFy(106),
     time: "45 minutes",
   },
@@ -77,7 +77,7 @@ module.exports = [
   {
     id: 10,
     name: "Stir fried Daikin",
-    description: "Phoebe classic",
+    description: "Phoebe classic.",
     source: phoebe,
     time: "15 minutes",
   },
@@ -93,7 +93,7 @@ module.exports = [
     id: 12,
     name: "Latkes",
     description: "It's like you fried a potato, and went to heaven.",
-    source: "Mum or thermomix recipe",
+    source: "Probably my mum.",
     time: "20-30 minutes",
     image: "latkes.jpg",
   },
@@ -127,7 +127,7 @@ module.exports = [
     description:
       "Our most popular entree. Stolen from NZ Nicole. Salt, oil and chili.",
     time: "30 minutes",
-    source: "Nicole (NZ)",
+    source: "Our friend, Nicole.",
     image: "fried-tofu.jpg",
   },
   {
@@ -139,7 +139,7 @@ module.exports = [
   },
   {
     id: 18,
-    name: "Butternut squash with pumpkin seeds and cardamom",
+    name: "Butternut squash with pumpkin seeds and cardamom. ",
     description: "",
     time: "1 hour",
     image: "pumpkin.jpg",
