@@ -12,7 +12,7 @@ type Props = {|
 function Post({ data, className }: Props) {
   const { allMarkdownRemark } = data
   return (
-    <StandardTemplate>
+    <StandardTemplate route="/words">
       <div className="pl-4">
         {allMarkdownRemark.edges.map(({ node }) => (
           <Link to={node.frontmatter.path} key={node.frontmatter.path}>

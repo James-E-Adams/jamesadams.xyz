@@ -2,10 +2,6 @@
 
 import * as React from "react"
 
-import StandardTemplate from "src/templates/Standard"
+import About from "./About"
 
-function Index() {
-  return <StandardTemplate />
-}
-
-export default Index
+export default About

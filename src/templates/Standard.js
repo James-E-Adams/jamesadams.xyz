@@ -10,16 +10,17 @@ import "src/styles/reset.css"
 type Props = {|
   +className?: string,
   +children?: React.Node,
+  +route?: string,
 |}
 
-function Standard({ className, children }: Props) {
+function Standard({ className, children, route }: Props) {
   return (
     <div
       className={classnames("min-h-screen", className)}
       style={{ background: "linear-gradient(#ffafbd, #ffc3a0)" }}
     >
       <SEO />
-      <Header />
+      <Header currentRoute={route} />
       {children}
     </div>
   )
