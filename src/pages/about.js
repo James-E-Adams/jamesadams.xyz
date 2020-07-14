@@ -48,31 +48,45 @@ function About() {
           <div className="mt-12">Elsewhere on the internet:</div>
           <ul className="list-inside list-disc pt-4">
             <li>
-              <a target="_blank" href="https://twitter.com/jamesadams0">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/jamesadams0"
+              >
                 twitter
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://github.com/James-E-Adams">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/James-E-Adams"
+              >
                 GitHub
               </a>
             </li>
             <li>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.thecrag.com/climber/jamesadams"
               >
                 theCrag
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://lichess.org/@/james-adams">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://lichess.org/@/james-adams"
+              >
                 lichess
               </a>
             </li>
             <li>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.strava.com/athletes/20075219"
               >
                 Strava
@@ -81,6 +95,7 @@ function About() {
             <li>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.goodreads.com/user/show/91757357-james"
               >
                 Goodreads

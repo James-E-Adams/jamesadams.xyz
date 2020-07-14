@@ -32,7 +32,7 @@ function Link({
 
 function Header({ className, currentRoute }: Props) {
   return (
-    <div className={classnames("flex h-20 pl-4", className)}>
+    <div className={classnames("flex h-20 pl-4 overflow-auto", className)}>
       <Link component="div" currentRoute={currentRoute} className="pr-8 ">
         James
       </Link>

@@ -9,12 +9,14 @@ type Props = {|
   +className?: string,
 |}
 
-function Link({ className, ...props }) {
+function Link({ className, children, ...props }) {
   return (
     <a
       className={classnames("hover:underline font-bold", className)}
       {...props}
-    />
+    >
+      {children}
+    </a>
   )
 }
 
@@ -22,7 +24,9 @@ function Projects({ className }: Props) {
   return (
     <StandardTemplate route="/projects">
       <ContentContainer>
-        <div className="text-3xl text-center">Some things I've worked on:</div>
+        <div className="text-3xl text-center leading-normal">
+          Some things I've worked on:
+        </div>
         <ul className="list-inside list-disc pt-8">
           <li className="mb-10">
             <Link href="https://up.com.au">Up</Link>: The best bank in
@@ -38,7 +42,13 @@ function Projects({ className }: Props) {
                 people were winning, jumping all across Australia and zooming in
                 on the cafes.
               </li>
-              <li className="font-bold">Secret projects 👀</li>
+              <li className="font-bold">
+                Secret projects{" "}
+                <span role="img" aria-label="eyes emoji">
+                  {" "}
+                  👀
+                </span>
+              </li>
             </ul>
           </li>
           <li className="mb-10">
