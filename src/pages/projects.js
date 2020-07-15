@@ -67,9 +67,9 @@ function Projects({ className }: Props) {
                 <span className="font-bold"> JavaScript everywhere! </span>: I
                 shoehorned React Native into an existing iOS application so I
                 could contribute some feature development without knowing Swift.
-                And it shipped! It was deleted 6 months down the track, but
-                pretty proud I got it out the door. I even gave a talk at the
-                melbourne React meetup about it.
+                And it shipped! It was deleted 6 months down the track, but I
+                got it out the door. I even gave a talk at the melbourne React
+                meetup about it.
               </li>
             </ul>
           </li>

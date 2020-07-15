@@ -8,6 +8,7 @@ import useHover from "react-use-hover"
 import type { Item } from "src/types/menu"
 import useBreakpoint from "src/lib/hooks/useBreakpoint"
 import { useItemContext } from "src/contexts/menu/itemContext"
+import { enableImagePreviews } from "src/lib/config"
 type Props = {|
   +item?: Item,
 |}
@@ -21,6 +22,7 @@ function MenuItem({ className, item }: Props) {
   const [isHovering, hoverProps] = useHover()
   const { item: contextItem, setItem } = useItemContext()
   React.useEffect(() => {
+    if (!enableImagePreviews) return
     if (isMobile) return
     if (item !== contextItem && isHovering) {
       setItem(item)
