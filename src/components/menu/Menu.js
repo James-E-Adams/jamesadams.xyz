@@ -9,6 +9,8 @@ import ColumnThree from "./ColumnThree"
 import { ItemContext } from "src/contexts/menu/itemContext"
 import BorderContainer from "./BorderContainer"
 import ChefSvg from "./assets/cooking.inline.svg"
+import { enableImagePreviews } from "src/lib/config"
+import Back from "./Back"
 type Props = {|
   +className?: string,
 |}
@@ -22,6 +24,7 @@ function useItemState() {
 }
 
 const imagePosition = { top: 50, right: 50 }
+
 function Menu({ className, dinner, breakfast, snacks }: Props) {
   const itemState = useItemState()
   return (
@@ -34,11 +37,13 @@ function Menu({ className, dinner, breakfast, snacks }: Props) {
       >
         <BorderContainer>
           <div className="w-full flex items-center justify-between sm:pt-2 pt-4 text-3xl mb-8 font-bold">
-            <Link className="w-4" to="/">
-              Back
-            </Link>
+            <div className="w-16">
+              <Back to={"/"} />
+            </div>
             <ChefSvg className="w-16 h-16" />
-            <div className="w-4" />
+            <Link className="w-16 text-lg" to="menu/what_is_this">
+              What is this?
+            </Link>
           </div>
           <div className="flex px-4 -mt-4">
             <div>
@@ -54,10 +59,12 @@ function Menu({ className, dinner, breakfast, snacks }: Props) {
               />
               <Section title="Snacks" className="mt-4 w-80" items={snacks} />
             </div>
-            <ColumnThree
-              className="fixed sm:block hidden"
-              style={imagePosition}
-            />
+            {enableImagePreviews && (
+              <ColumnThree
+                className="fixed sm:block hidden"
+                style={imagePosition}
+              />
+            )}
           </div>
         </BorderContainer>
       </div>

@@ -7,7 +7,6 @@ const events = require("./events/events")
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-
   menuBuildTimeTasks(createPage)
   await postsBuildTimeTasks(createPage, graphql)
 }
@@ -40,6 +39,10 @@ const postsBuildTimeTasks = async (createPage, graphql) => {
 }
 
 const menuBuildTimeTasks = createPage => {
+  createPage({
+    component: path.resolve("./src/templates/menu/WhatIsThis.js"),
+    path: "menu/what_is_this",
+  })
   const createDishPage = item => {
     createPage({
       component: path.resolve(`./src/templates/menu/ItemTemplate.js`),
