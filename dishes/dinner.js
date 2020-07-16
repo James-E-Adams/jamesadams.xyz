@@ -169,4 +169,12 @@ module.exports = [
     image: "green-beans.jpg",
     source: phoebe,
   },
+  {
+    id: 22,
+    name: "Curry Laksa",
+    description: "I didn't think it would be this easy.",
+    time: "1.5 Hours",
+    image: "laksa.jpg",
+    source: "Seb!",
+  },
 ]
