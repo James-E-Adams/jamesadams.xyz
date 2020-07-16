@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Menu`,
-    description: `James Menu`,
+    title: `James Adams`,
+    description: `James Adams`,
     author: `@jamesadams0`,
   },
   plugins: [
@@ -26,8 +26,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `What's for dinner?`,
-        short_name: `Menu`,
+        name: `James Adams`,
+        short_name: `James`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
