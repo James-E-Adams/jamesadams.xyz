@@ -13,7 +13,7 @@ function Post({ data, className }: Props) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   return (
-    <StandardTemplate>
+    <StandardTemplate route="/words">
       <div className="flex justify-center mt-20">
         <div className="w-4/5">
           <h2 className="text-4xl font-bold mb-2">{frontmatter.title}</h2>

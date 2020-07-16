@@ -29,14 +29,18 @@ function Post({ data, className }: Props) {
           </a>
           .
         </div>
-        {allMarkdownRemark.edges.map(({ node }) => (
-          <Link to={node.frontmatter.path} key={node.frontmatter.path}>
-            <span className="font-semibold pr-2">
-              {new Date(node.frontmatter.date).toLocaleDateString()}:
-            </span>
-            {node.frontmatter.title}
-          </Link>
-        ))}
+        <div>
+          {allMarkdownRemark.edges.map(({ node }) => (
+            <div>
+              <Link to={node.frontmatter.path} key={node.frontmatter.path}>
+                <span className="font-semibold pr-2">
+                  {new Date(node.frontmatter.date).toLocaleDateString()}:
+                </span>
+                {node.frontmatter.title}
+              </Link>
+            </div>
+          ))}
+        </div>
       </ContentContainer>
     </StandardTemplate>
   )
