@@ -6,6 +6,8 @@ path: /words/letter-to-myself
 
 Originally posted [**here**](https://medium.com/@jamesadams0/on-the-origin-of-the-waning-attention-spans-of-generation-y-or-a-letter-to-myself-906abb19feb6) on 31/12/2017. It's unedited.
 
+---
+
 Let’s see if I remember how to write. Happy new years, everybody!
 
 Our generation is the first not to know boredom. Or rather, to be so sensitive to it, to have boredom be such a foreign concept, that we panic at the sight of it.
