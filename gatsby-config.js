@@ -62,9 +62,9 @@ module.exports = {
         // The property ID; the tracking code won't be generated without it
         trackingId: "UA-123351565-2",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
+        head: true,
         // Setting this parameter is optional
-        anonymize: true,
+        anonymize: false,
         // Setting this parameter is also optional
         respectDNT: true,
         // Avoids sending pageview hits from custom paths
@@ -82,7 +82,7 @@ module.exports = {
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "example.com",
+        cookieDomain: "jamesadams.xyz",
       },
     }, // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
