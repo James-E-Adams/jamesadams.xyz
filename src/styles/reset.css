@@ -186,6 +186,7 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
   overscroll-behavior: none;
+  background: linear-gradient(#ffafbd, #ffc3a0);
 }
 * {
   box-sizing: inherit;
