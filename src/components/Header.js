@@ -1,6 +1,7 @@
 // @flow
 
 import * as React from "react"
+
 import { Link as BaseLink } from "gatsby"
 import classnames from "classnames"
 import ChefSvg from "src/components/menu/assets/cooking_dark.inline.svg"
@@ -32,7 +33,12 @@ function Link({
 
 function Header({ className, currentRoute }: Props) {
   return (
-    <div className={classnames("flex h-20 pl-4 overflow-auto", className)}>
+    <div
+      className={classnames(
+        "flex h-20 pl-4 overflow-auto border-b md:border-none relative",
+        className
+      )}
+    >
       <Link component="div" currentRoute={currentRoute} className="pr-8 ">
         James
       </Link>

@@ -2,7 +2,7 @@ import * as React from "react"
 
 import StandardTemplate from "src/templates/Standard"
 import ContentContainer from "../components/ContentContainer"
-
+import Me from "src/components/Me"
 const hobbies = [
   "climbing rocks of varying sizes, colours and types",
   "pedalling away my existential angst on a mountain bike",
@@ -14,6 +14,9 @@ function About() {
   return (
     <StandardTemplate route="/about">
       <ContentContainer>
+        <div className="mb-10 flex items-center justify-center">
+          <Me className="rounded-full w-32 border-solid border-red-800 border-4" />
+        </div>
         <div className="text-4xl text-center">Hi I'm James! </div>
         <div className="text-lg">
           <div className="mt-8">

@@ -1,4 +1,8 @@
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { faCoffee, faArrowLeft } from "@fortawesome/free-solid-svg-icons"
+import {
+  faCoffee,
+  faArrowLeft,
+  faArrowRight,
+} from "@fortawesome/free-solid-svg-icons"
 
-library.add(faArrowLeft, faCoffee)
+library.add(faArrowLeft, faArrowRight, faCoffee)
