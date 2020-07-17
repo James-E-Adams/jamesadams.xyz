@@ -31,12 +31,8 @@ function Post({ data, className }: Props) {
         </div>
         <div>
           {allMarkdownRemark.edges.map(({ node }) => (
-            <div className="mb-8">
-              <Link
-                to={node.frontmatter.path}
-                className="text-xl"
-                key={node.frontmatter.path}
-              >
+            <div className="mb-8" key={node.frontmatter.path}>
+              <Link to={node.frontmatter.path} className="text-xl">
                 {node.frontmatter.title}
               </Link>
               <div className="pr-2 text-sm">
