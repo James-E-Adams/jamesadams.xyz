@@ -43,9 +43,15 @@ function WhatIsThis({ className }: Props) {
 
             <div>
               Tech wise, I've basically got Gatsby generating all the pages at
-              build time from a couple JSON files. Once I make the code public,
-              I'll chuck a link here. Should be pretty easy to fork and make
-              your own! If you do something cool, please open a PR!
+              build time from a couple JSON files. You can see the secret sauce{" "}
+              <a
+                className="font-bold"
+                href="https://github.com/James-E-Adams/jamesadams.xyz/blob/master/gatsby-node.js#L41"
+              >
+                here
+              </a>
+              . Should be pretty easy to fork and make your own! If you do
+              something cool, please open a PR!
             </div>
           </ContentContainer>
         </div>

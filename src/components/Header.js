@@ -45,14 +45,6 @@ function Header({ className, currentRoute }: Props) {
       <Link currentRoute={currentRoute} className="pr-8" to="/about">
         About
       </Link>
-      <Link
-        currentRoute={currentRoute}
-        className="pr-8 flex items-center"
-        to="/menu"
-      >
-        <ChefSvg className="w-8 h-8 mr-2" />
-        Menu
-      </Link>
       <Link currentRoute={currentRoute} className="pr-8" to="/words">
         Words
       </Link>
@@ -61,6 +53,14 @@ function Header({ className, currentRoute }: Props) {
       </Link>
       <Link currentRoute={currentRoute} className="pr-8" to="/talks">
         Talks
+      </Link>
+      <Link
+        currentRoute={currentRoute}
+        className="pr-8 flex items-center"
+        to="/menu"
+      >
+        <ChefSvg className="w-8 h-8 mr-2" />
+        Menu
       </Link>
     </div>
   )
