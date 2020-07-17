@@ -21,7 +21,7 @@ function Link({
     <Component
       className={classnames(
         "font-semibold text-lg flex items-center",
-        to === currentRoute && "underline",
+        to === currentRoute && "text-gray-700",
         className
       )}
       to={to}

@@ -11,10 +11,7 @@ type Props = {|
 
 function Link({ className, children, ...props }) {
   return (
-    <a
-      className={classnames("hover:underline font-bold", className)}
-      {...props}
-    >
+    <a className={classnames("font-bold", className)} {...props}>
       {children}
     </a>
   )
@@ -54,7 +51,7 @@ function Projects({ className }: Props) {
           <li className="mb-10">
             <Link
               href="https://www.drawboard.com/projects/"
-              className="hover:underline font-bold"
+              className="font-bold"
             >
               Drawboard Projects
             </Link>

@@ -23,7 +23,7 @@ function Post({ data, className }: Props) {
             rel="noopener noreferrer"
             href="https://medium.com/@jamesadams0"
             target="_blank"
-            className="font-bold hover:underline"
+            className="font-bold"
           >
             here
           </a>
