@@ -1,6 +1,6 @@
 ---
 title: What To Do With Your Money
-date: 2018-01-04
+date: 2018-01-29
 path: /words/index_funds
 ---
 
