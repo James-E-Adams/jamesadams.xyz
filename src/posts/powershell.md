@@ -1,10 +1,12 @@
 ---
-title: How to fix your powershell window not opening when you…open powershell!
+title: Powershell
 date: 2018-01-08
 path: /words/powershell
 ---
 
-Originally posted [**here**](https://medium.com/@jamesadams0/how-to-fix-your-powershell-window-not-opening-when-you-open-powershell-f14a40c908b) on 08/01/2018. It's unedited.
+Originally posted [**here**](https://medium.com/@jamesadams0/how-to-fix-your-powershell-window-not-opening-when-you-open-powershell-f14a40c908b) on 08/01/2018 with the title: _How to fix your powershell window not opening when you…open powershell!_.
+
+It's unedited.
 
 ---
 

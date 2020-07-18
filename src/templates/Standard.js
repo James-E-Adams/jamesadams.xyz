@@ -46,7 +46,10 @@ function Standard({ className, children, route }: Props) {
       <SEO />
       <Header currentRoute={route} />
       <div className="absolute block md:hidden" style={leftArrowStyle}>
-        <FontAwesomeIcon icon="arrow-left" />
+        <button onClick={setShowScrollMessage.bind(true)}>
+          <FontAwesomeIcon icon="arrow-left" />
+        </button>
+
         {showScrollMessage && <ScrollText />}
       </div>
       <div
