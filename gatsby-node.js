@@ -33,7 +33,7 @@ const postsBuildTimeTasks = async (createPage, graphql) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
-      component: path.resolve("src/templates/post.js"),
+      component: path.resolve("src/templates/post/index.js"),
     })
   })
 }
