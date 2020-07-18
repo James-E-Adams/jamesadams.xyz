@@ -11,7 +11,12 @@ type Props = {|
 function Source({ source, className }: Props) {
   if (!source) return null
   return source.includes("http") ? (
-    <a href={source} className={classnames("underline", className)}>
+    <a
+      href={source}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={classnames("underline", className)}
+    >
       Source
     </a>
   ) : (

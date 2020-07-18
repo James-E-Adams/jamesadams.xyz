@@ -45,13 +45,20 @@ function About() {
               direction of native apps. Nowadays, I work with the lovely people
               at{" "}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://ferocia.com.au"
                 className="hover:text-ferociaPurple"
               >
                 Ferocia
               </a>{" "}
               on{" "}
-              <a href="https://up.com.au" className="hover:text-upOrange">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://up.com.au"
+                className="hover:text-upOrange"
+              >
                 Up Bank
               </a>
               .

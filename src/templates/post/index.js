@@ -10,7 +10,7 @@ type Props = {|
 |}
 
 function Post({ data, className }: Props) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (
     <StandardTemplate route="/words">
@@ -22,8 +22,14 @@ function Post({ data, className }: Props) {
           <hr />
           <div className="mb-10">
             Thanks for reading! Feel free to drop me a line at{" "}
-            <a href="mailto:hello@jamesadams.xyz"> hello@jamesadams.xyz </a> and
-            let me know your thoughts!
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:hello@jamesadams.xyz"
+            >
+              hello@jamesadams.xyz
+            </a>{" "}
+            and let me know your thoughts!
           </div>
         </div>
       </div>
