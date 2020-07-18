@@ -11,6 +11,12 @@ module.exports = {
       "16": "16px",
       "24": "24px",
     },
+    extend: {
+      colors: {
+        upOrange: "#ff7a64",
+        ferociaPurple: "#ba33f4",
+      },
+    },
   },
   variants: {},
   plugins: [],

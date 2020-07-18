@@ -38,7 +38,24 @@ function About() {
               {"  "}
               <span className="font-bold">human</span>{" "}
             </div>{" "}
-            <div>from not-so-sunny Melbourne, Australia. </div>
+            <div className="mb-6">from not-so-sunny Melbourne, Australia. </div>
+            <div>
+              I’ve spent most of my career pigeon-holed inside a browser,
+              digging my way out with varying degrees of success - mostly in the
+              direction of native apps. Nowadays, I work with the lovely people
+              at{" "}
+              <a
+                href="https://ferocia.com.au"
+                className="hover:text-ferociaPurple"
+              >
+                Ferocia
+              </a>{" "}
+              on{" "}
+              <a href="https://up.com.au" className="hover:text-upOrange">
+                Up Bank
+              </a>
+              .
+            </div>
           </div>
           <div className="mt-12">
             When I'm not frowning at computers, you can find me:
@@ -47,6 +64,10 @@ function About() {
                 <li key={index}>{hobby}</li>
               ))}
             </ul>
+          </div>
+          <div className="mt-8">
+            Feel free to say hello at{" "}
+            <a href="mailto:hello@jamesadams.xyz">hello@jamesadams.xyz </a>.
           </div>
           <div className="mt-12">Elsewhere on the internet:</div>
           <ul className="list-inside list-disc pt-4">
