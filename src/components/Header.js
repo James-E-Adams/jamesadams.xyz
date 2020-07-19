@@ -19,15 +19,17 @@ function Link({
   ...props
 }) {
   return (
-    <Component
-      className={classnames(
-        "font-semibold text-lg flex items-center",
-        to === currentRoute && "text-green-700",
-        className
-      )}
-      to={to}
-      {...props}
-    />
+    <div className="flex justify-center items-center pr-8">
+      <Component
+        className={classnames(
+          "font-semibold text-lg flex items-center",
+          to === currentRoute && "text-green-700",
+          className
+        )}
+        to={to}
+        {...props}
+      />
+    </div>
   )
 }
 
@@ -39,24 +41,24 @@ function Header({ className, currentRoute }: Props) {
         className
       )}
     >
-      <Link component="div" currentRoute={currentRoute} className="pr-8 ">
+      <Link component="div" currentRoute={currentRoute}>
         James
       </Link>
-      <Link currentRoute={currentRoute} className="pr-8" to="/about">
+      <Link currentRoute={currentRoute} to="/about">
         About
       </Link>
-      <Link currentRoute={currentRoute} className="pr-8" to="/words">
+      <Link currentRoute={currentRoute} to="/words">
         Words
       </Link>
-      <Link currentRoute={currentRoute} className="pr-8" to="/projects">
+      <Link currentRoute={currentRoute} to="/projects">
         Projects
       </Link>
-      <Link currentRoute={currentRoute} className="pr-8" to="/talks">
+      <Link currentRoute={currentRoute} to="/talks">
         Talks
       </Link>
       <Link
         currentRoute={currentRoute}
-        className="pr-8 flex items-center"
+        className="flex items-center"
         to="/menu"
       >
         <ChefSvg className="w-8 h-8 mr-2" />

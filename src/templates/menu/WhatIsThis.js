@@ -45,6 +45,8 @@ function WhatIsThis({ className }: Props) {
               Tech wise, I've basically got Gatsby generating all the pages at
               build time from a couple JSON files. You can see the secret sauce{" "}
               <a
+                target="_blank"
+                rel="noopener noreferrer"
                 className="font-bold"
                 href="https://github.com/James-E-Adams/jamesadams.xyz/blob/master/gatsby-node.js#L41"
               >

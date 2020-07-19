@@ -11,7 +11,12 @@ type Props = {|
 
 function Link({ className, children, ...props }) {
   return (
-    <a className={classnames("font-bold", className)} {...props}>
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      className={classnames("font-bold", className)}
+      {...props}
+    >
       {children}
     </a>
   )

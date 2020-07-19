@@ -74,7 +74,14 @@ function About() {
           </div>
           <div className="mt-8">
             Feel free to say hello at{" "}
-            <a href="mailto:hello@jamesadams.xyz">hello@jamesadams.xyz </a>.
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:hello@jamesadams.xyz"
+            >
+              hello@jamesadams.xyz{" "}
+            </a>
+            .
           </div>
           <div className="mt-12">Elsewhere on the internet:</div>
           <ul className="list-inside list-disc pt-4">

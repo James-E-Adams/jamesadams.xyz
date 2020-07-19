@@ -55,6 +55,8 @@ function Talks({ className }: Props) {
           <div className="mt-2 mb-3 text-lg">
             <span>Code examples can be found </span>
             <a
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-bold"
               href="https://github.com/James-E-Adams/HOC-FP-React-Talk"
             >
