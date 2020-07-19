@@ -96,7 +96,7 @@ A quick muck around in the dev tools showed that a CSS property that should be `
 
 Diffing with the compiled CSS prior to the offending commit resulted in the following:
 
-```
+```css
 -------
 <   -webkit-box-sizing: content-box;
 <   box-sizing: content-box;
