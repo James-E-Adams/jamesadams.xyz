@@ -34,6 +34,19 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: "gatsby-remark-video",
+      options: {
+        width: 800,
+        height: "auto",
+        preload: "auto",
+        muted: true,
+        autoplay: true,
+        playsinline: true,
+        controls: true,
+        loop: true,
+      },
+    },
     "gatsby-plugin-twitter",
     `gatsby-plugin-react-helmet`,
     {

@@ -328,9 +328,11 @@ I’m hoping the code is pretty self-documenting. It’s a _nifty_ HOC which abs
 
 So far — I’ve only showed learning examples. Whilst cool — they don’t really show what functional React can look like when taken to the **extreme**.
 
-<p align="center">
+`video: ./images/fr9.mp4`
+
+<!-- <p align="center">
   <img alt="kid dancing" src="./images/fr9.gif" >
-</p>
+</p> -->
 
 Below is the default export for one of our biggest components. It has a lot of behaviour and is one of the uglier of the bunch. But all of its functionality is composed of many small buildings blocks. All the `handlers` are tiny functions. And the view logic is a stateless functional component that does nothing besides declare how the component should _look_.
 
