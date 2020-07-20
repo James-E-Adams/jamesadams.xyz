@@ -6161,6 +6161,13 @@ gatsby-remark-images@^3.3.19:
     unist-util-select "^1.5.0"
     unist-util-visit-parents "^2.1.2"
 
+gatsby-remark-soundcloud@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-soundcloud/-/gatsby-remark-soundcloud-1.0.3.tgz#3bcc4721d1ae7ee33befbc65bc5b211a9298a55b"
+  integrity sha512-xjqK7jgnbQP3huq/n3Sz+9H7SqtCBeVdnR3swF2HAfRStR55Z6YF4AGTHHzwjFmldj+Sgz7upJ90wrk+G6gvpg==
+  dependencies:
+    unist-util-visit "^1.4.0"
+
 gatsby-remark-vscode@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-remark-vscode/-/gatsby-remark-vscode-3.0.1.tgz#b2d7a61fccc7e28d9f7ef7d2fc1d75afbba42a3f"
@@ -13716,7 +13723,7 @@ unist-util-visit@2.0.2, unist-util-visit@^2.0.0, unist-util-visit@^2.0.2:
     unist-util-is "^4.0.0"
     unist-util-visit-parents "^3.0.0"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.4.1:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.4.0, unist-util-visit@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==
