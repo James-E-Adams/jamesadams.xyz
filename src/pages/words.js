@@ -16,7 +16,7 @@ function Post({ data, className }: Props) {
     <StandardTemplate route="/words">
       <ContentContainer>
         <div className="text-3xl mb-10 text-center">Words</div>
-        <div className="text-md mb-20">
+        <div className="line-through text-md mb-5">
           I'm in the progress of migrating my (very) old content from medium.
           For the time being, you can find it{" "}
           <a
@@ -28,6 +28,10 @@ function Post({ data, className }: Props) {
             here
           </a>
           .
+        </div>
+        <div className="mb-20">
+          Ok ok I finally did it 😅. Took me a while but pretty happy to have
+          control over my own content.
         </div>
         <div>
           {allMarkdownRemark.edges.map(({ node }) => (
