@@ -44,12 +44,10 @@ function Projects({ className }: Props) {
                 people were winning, jumping all across Australia and zooming in
                 on the cafes.
               </li>
-              <li className="font-bold">
-                Secret projects{" "}
-                <span role="img" aria-label="eyes emoji">
-                  {" "}
-                  👀
-                </span>
+              <li>
+                <Link href="https://developer.up.com.au/">Public API</Link>: I
+                built this front-end for the docs. Check out the logo
+                shenanigans when you move your mouse around!
               </li>
             </ul>
           </li>
