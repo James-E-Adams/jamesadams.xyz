@@ -14,6 +14,7 @@ type Props = {|
   +className?: string,
   +children?: React.Node,
   +route?: string,
+  +seoProps?: {},
 |}
 
 const { useState } = React
@@ -30,7 +31,7 @@ const ScrollText = () => (
   <div className="text-pink-800"> No silly, scroll the nav! </div>
 )
 
-function Standard({ className, children, route }: Props) {
+function Standard({ className, children, route, seoProps }: Props) {
   const [showScrollMessage, setShowScrollMessageBase] = useState(false)
 
   const setShowScrollMessage = () => {
@@ -43,7 +44,7 @@ function Standard({ className, children, route }: Props) {
       className={classnames("min-h-screen relative", className)}
       style={{ background: "linear-gradient(#ffafbd, #ffc3a0)" }}
     >
-      <SEO />
+      <SEO {...seoProps} />
       <Header currentRoute={route} />
       <div className="absolute block md:hidden" style={leftArrowStyle}>
         <button onClick={setShowScrollMessage.bind(true)}>

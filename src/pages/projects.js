@@ -29,7 +29,7 @@ function NestedListItem({ className, ...props }) {
 
 function Projects({ className }: Props) {
   return (
-    <StandardTemplate route="/projects">
+    <StandardTemplate seoProps={{ title: "Projects" }} route="/projects">
       <ContentContainer>
         <div className="text-3xl text-center leading-normal">
           Some stuff I've worked on:

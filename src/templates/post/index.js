@@ -12,8 +12,11 @@ type Props = {|
 function Post({ data, className }: Props) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
+  const seoProps = {
+    title: frontmatter.title,
+  }
   return (
-    <StandardTemplate route="/words">
+    <StandardTemplate seoProps={seoProps} route="/words">
       <div className="flex justify-center mt-16">
         <div className="md:max-w-2xl w-4/5">
           <h2 className="text-4xl font-bold mb-2">{frontmatter.title}</h2>

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `James Adams`,
-    description: `James Adams`,
-    author: `@jamesadams0`,
+    title: "James Adams",
+    description: "James Adams",
+    author: "@jamesadams0",
   },
   plugins: [
     `gatsby-plugin-sharp`,

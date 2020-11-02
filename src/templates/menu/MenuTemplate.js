@@ -18,7 +18,7 @@ const MenuTemplate = ({ pageContext }) => {
   const { breakfast, dinner, snacks } = pageContext
   return (
     <>
-      <SEO />
+      <SEO title="Menu" />
       <Menu breakfast={breakfast} dinner={dinner} snacks={snacks} />
     </>
   )

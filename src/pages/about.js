@@ -12,7 +12,7 @@ const hobbies = [
 
 function About() {
   return (
-    <StandardTemplate route="/about">
+    <StandardTemplate seoProps={{ title: "About" }} route="/about">
       <ContentContainer>
         <div className="mb-10 flex items-center justify-center">
           <Me className="rounded-full w-32 border-solid border-red-800 border-4" />

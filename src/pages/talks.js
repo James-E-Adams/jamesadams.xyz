@@ -33,7 +33,7 @@ type Props = {|
 
 function Talks({ className }: Props) {
   return (
-    <StandardTemplate route="/talks">
+    <StandardTemplate route="/talks" seoProps={{ title: "Talks" }}>
       <div className="flex justify-center">
         <div className="w-4/5 mt-10">
           <div className="mb-16 text-3xl leading-normal text-center">
