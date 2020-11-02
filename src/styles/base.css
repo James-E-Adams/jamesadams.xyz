@@ -9,3 +9,7 @@ a {
 a:hover {
   text-decoration: none;
 }
+
+ul {
+  list-style: disc;
+}

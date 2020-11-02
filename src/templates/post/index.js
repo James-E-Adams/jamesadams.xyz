@@ -15,7 +15,7 @@ function Post({ data, className }: Props) {
   return (
     <StandardTemplate route="/words">
       <div className="flex justify-center mt-16">
-        <div className="w-4/5">
+        <div className="md:max-w-2xl w-4/5">
           <h2 className="text-4xl font-bold mb-2">{frontmatter.title}</h2>
           <h1>{frontmatter.date}</h1>
           <div className="mt-6" dangerouslySetInnerHTML={{ __html: html }} />

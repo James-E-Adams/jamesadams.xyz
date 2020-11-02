@@ -29,9 +29,13 @@ function Post({ data, className }: Props) {
           </a>
           .
         </div>
-        <div className="mb-20">
-          Ok ok I finally did it 😅. Took me a while but pretty happy to have
-          control over my own content.
+        <div className="mb-10">
+          Ok ok I finally did it{" "}
+          <span role="img" aria-label="Sweating smile">
+            😅
+          </span>{" "}
+          . Took me a while but pretty happy to have control over my own
+          content.
         </div>
         <div>
           {allMarkdownRemark.edges.map(({ node }) => (
@@ -41,6 +45,7 @@ function Post({ data, className }: Props) {
               </Link>
               <div className="pr-2 text-sm">
                 {new Date(node.frontmatter.date).toDateString()}
+                <span className="ml-8">({node.fields.readingTime.text})</span>
               </div>
             </div>
           ))}
@@ -59,6 +64,11 @@ export const pageQuery = graphql`
             path
             title
             date
+          }
+          fields {
+            readingTime {
+              text
+            }
           }
         }
       }

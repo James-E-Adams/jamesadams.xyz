@@ -38,6 +38,7 @@ module.exports = {
               theme: "Abyss", // Or install your favorite theme from GitHub
             },
           },
+          "gatsby-remark-reading-time",
         ],
       },
     },
