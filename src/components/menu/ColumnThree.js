@@ -10,7 +10,7 @@ type Props = {|
   +style?: Object,
 |}
 
-function ColumnThree({ className, style }: Props) {
+function ColumnThree({ className, style }: Props): React.Node {
   const { item } = useItemContext()
   const isMobile = useIsMobile()
   if (!item || isMobile) return null

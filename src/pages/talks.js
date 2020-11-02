@@ -31,7 +31,7 @@ type Props = {|
   +className?: string,
 |}
 
-function Talks({ className }: Props) {
+function Talks({ className }: Props): React.Node {
   return (
     <StandardTemplate route="/talks" seoProps={{ title: "Talks" }}>
       <div className="flex justify-center">

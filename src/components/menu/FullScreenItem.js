@@ -7,10 +7,11 @@ import type { Item } from "src/types/menu"
 import Source from "./Source"
 import { useIsMobile } from "src/lib/hooks/useBreakpoint"
 type Props = {|
+  +className?: string,
   +item?: Item,
 |}
 
-function FullScreenItem({ className, item }: Props) {
+function FullScreenItem({ className, item }: Props): React.Node {
   const {
     name,
     description,

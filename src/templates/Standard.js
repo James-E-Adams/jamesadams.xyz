@@ -31,7 +31,7 @@ const ScrollText = () => (
   <div className="text-pink-800"> No silly, scroll the nav! </div>
 )
 
-function Standard({ className, children, route, seoProps }: Props) {
+function Standard({ className, children, route, seoProps }: Props): React.Node {
   const [showScrollMessage, setShowScrollMessageBase] = useState(false)
 
   const setShowScrollMessage = () => {

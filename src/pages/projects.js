@@ -27,7 +27,7 @@ function NestedListItem({ className, ...props }) {
   return <li className={classnames("mb-10", className)} {...props} />
 }
 
-function Projects({ className }: Props) {
+function Projects({ className }: Props): React.Node {
   return (
     <StandardTemplate seoProps={{ title: "Projects" }} route="/projects">
       <ContentContainer>

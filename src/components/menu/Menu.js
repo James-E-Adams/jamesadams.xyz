@@ -4,6 +4,7 @@ import * as React from "react"
 import classnames from "classnames"
 import { Link } from "gatsby"
 
+import type { Item } from "src/types/menu"
 import Section from "./Section"
 import ColumnThree from "./ColumnThree"
 import { ItemContext } from "src/contexts/menu/itemContext"
@@ -11,8 +12,14 @@ import BorderContainer from "./BorderContainer"
 import ChefSvg from "./assets/cooking.inline.svg"
 import { enableImagePreviews } from "src/lib/config"
 import Back from "./Back"
+
+type ItemList = Array<Item>
+
 type Props = {|
   +className?: string,
+  +dinner: ItemList,
+  +breakfast: ItemList,
+  +snacks: ItemList,
 |}
 
 const { useMemo, useState } = React
@@ -25,7 +32,7 @@ function useItemState() {
 
 const imagePosition = { top: 50, right: 50 }
 
-function Menu({ className, dinner, breakfast, snacks }: Props) {
+function Menu({ className, dinner, breakfast, snacks }: Props): React.Node {
   const itemState = useItemState()
   return (
     <ItemContext.Provider value={itemState}>

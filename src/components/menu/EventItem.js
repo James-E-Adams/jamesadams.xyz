@@ -8,7 +8,7 @@ type Props = {|
   +item?: Item,
 |}
 
-function EventItem({ className, item }: Props) {
+function EventItem({ className, item }: Props): React.Node {
   const { name, description, time, image, source } = item
   return (
     <div>

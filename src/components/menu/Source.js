@@ -8,7 +8,7 @@ type Props = {|
   +className: string,
 |}
 
-function Source({ source, className }: Props) {
+function Source({ source, className }: Props): React.Node {
   if (!source) return null
   return source.includes("http") ? (
     <a

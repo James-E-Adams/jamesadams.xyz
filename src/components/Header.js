@@ -8,7 +8,10 @@ import ChefSvg from "src/components/menu/assets/cooking_dark.inline.svg"
 
 type Props = {|
   +className?: string,
+  +to?: string,
   +currentRoute?: string,
+  +component?: React.ElementType,
+  +children?: React.Node,
 |}
 
 function Link({
@@ -17,7 +20,7 @@ function Link({
   currentRoute,
   to,
   ...props
-}) {
+}: Props) {
   return (
     <div className="flex justify-center items-center pr-8">
       <Component
@@ -33,7 +36,7 @@ function Link({
   )
 }
 
-function Header({ className, currentRoute }: Props) {
+function Header({ className, currentRoute }: Props): React.Node {
   return (
     <div
       className={classnames(

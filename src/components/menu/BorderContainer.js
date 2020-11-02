@@ -6,6 +6,7 @@ import { useIsMobile } from "src/lib/hooks/useBreakpoint"
 
 type Props = {|
   +className?: string,
+  +children?: React.Node,
 |}
 
 const borderStyle = {
@@ -21,7 +22,7 @@ const mobileBorderStyle = {
   boxShadow: "0 0 0 1rem #f6d6c6",
 }
 
-function BorderContainer({ className, children }: Props) {
+function BorderContainer({ className, children }: Props): React.Node {
   const isMobile = useIsMobile()
   return (
     <div

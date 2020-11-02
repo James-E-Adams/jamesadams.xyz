@@ -8,12 +8,14 @@ import ContentContainer from "../components/ContentContainer"
 
 type Props = {|
   +className?: string,
+  data: {},
 |}
 
-function Post({ data, className }: Props) {
+function Post({ data, className }: Props): React.Node {
   const { allMarkdownRemark } = data
+
   return (
-    <StandardTemplate route="/words">
+    <StandardTemplate seoProps={{ title: "Words" }} route="/words">
       <ContentContainer>
         <div className="text-3xl mb-10 text-center">Words</div>
         <div className="line-through text-md mb-5">

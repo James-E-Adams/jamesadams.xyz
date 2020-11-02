@@ -9,13 +9,15 @@ import type { Item } from "src/types/menu"
 import useBreakpoint from "src/lib/hooks/useBreakpoint"
 import { useItemContext } from "src/contexts/menu/itemContext"
 import { enableImagePreviews } from "src/lib/config"
+import { string } from "prop-types"
 type Props = {|
+  +className?: string,
   +item?: Item,
 |}
 
 const linkFromName = name => `/menu/dish/${name.replace(/\s/gi, "-")}`
 
-function MenuItem({ className, item }: Props) {
+function MenuItem({ className, item }: Props): React.Node {
   const breakpoint = useBreakpoint()
   const isMobile = breakpoint === "xs"
   const { name, description, time } = item

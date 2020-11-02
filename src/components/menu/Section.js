@@ -10,7 +10,7 @@ type Props = {|
   +items: Array<Item>,
 |}
 
-function Section({ className, title, items }: Props) {
+function Section({ className, title, items }: Props): React.Node {
   return (
     <div className={classnames("", className)}>
       <h3> {title} </h3>
@@ -19,7 +19,7 @@ function Section({ className, title, items }: Props) {
           <MenuItem
             item={item}
             key={item.name}
-            className={index !== 0 && "mt-2"}
+            className={index !== 0 ? "mt-2" : ""}
           />
         ))}
     </div>

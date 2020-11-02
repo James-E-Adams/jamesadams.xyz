@@ -39,6 +39,7 @@
     "tailwindcss": "^1.4.6"
   },
   "devDependencies": {
+    "flow-bin": "^0.137.0",
     "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "2.0.5"
   },

@@ -11,7 +11,7 @@ type Props = {|
   +className?: string,
 |}
 
-function WhatIsThis({ className }: Props) {
+function WhatIsThis({ className }: Props): React.Node {
   return (
     <div
       className={classnames(
