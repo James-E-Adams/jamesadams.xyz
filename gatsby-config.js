@@ -3,6 +3,7 @@ module.exports = {
     title: "James Adams",
     description: "James Adams",
     author: "@jamesadams0",
+    origin: "https://jamesadams.xyz",
   },
   plugins: [
     `gatsby-plugin-sharp`,

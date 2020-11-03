@@ -39,6 +39,7 @@ function SEO({
             title
             description
             author
+            origin
           }
         }
       }
@@ -70,7 +71,11 @@ function SEO({
           <meta
             key={name}
             name={name}
-            content={window.location.origin + metaImagePath}
+            content={
+              (typeof window !== "undefined"
+                ? window.location.origin
+                : site.siteMetadata.origin) + metaImagePath
+            }
           />
         ))}
       {metaTags && metaTags.map((meta, idx) => <meta {...meta} key={idx} />)}
