@@ -1,11 +1,12 @@
 ---
 title: Random opinions on building software
+description: This is a collection of thoughts I have on how software should be built, and on the teams that do it. It's non-exhaustive and subject to change according to whim, time and heat.
 date: 2020-11-02
 path: /words/opinions-on-software
 hasMetaImage: true
 ---
 
-This is a collection of thoughts I have on how software should built, and the teams that do it. It's non-exhaustive and subject to change according to whim, time and heat. Moreover, it will likely evolve as I (ideally) learn and grow as an engineer and human. If something resonates or you strongly disagree - [**reach out**](https://twitter.com/@jamesadams0)! I'd love to know why.
+This is a collection of thoughts I have on how software should be built, and on the teams that do it. It's non-exhaustive and subject to change according to whim, time and heat. Moreover, it will likely evolve as I (ideally) learn and grow as an engineer and human. If something resonates or you strongly disagree - [**reach out**](https://twitter.com/@jamesadams0)! I'd love to know why.
 
 
 - The location of buttons shouldn't change as your page loads. On first contentful paint, if a button/other clickable element renders in some position, it shouldn't jump around when CSS/JS is finally parsed and executed. Likewise in mobile apps. This is shockingly ubiquitous across technology and it baffles me! I hate clicking on the wrong thing!

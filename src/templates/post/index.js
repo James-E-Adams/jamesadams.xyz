@@ -19,6 +19,7 @@ function Post({ data, className }: Props): React.Node {
   ]
   const seoProps = {
     title: frontmatter.title,
+    description: frontmatter.description,
     metaTags: metaTags,
     metaImagePath: frontmatter.hasMetaImage
       ? `/meta${frontmatter.path}.jpg`
@@ -57,6 +58,7 @@ export const pageQuery: any = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        description
         hasMetaImage
       }
       fields {
