@@ -13,7 +13,6 @@ type Props = {|
 function Post({ data, className }: Props): React.Node {
   const { markdownRemark } = data
   const { frontmatter, html, fields } = markdownRemark
-
   const metaTags = [
     { name: "twitter:label1", content: "Reading Time" },
     { name: "twitter:data1", content: fields.readingTime.text },
@@ -21,6 +20,9 @@ function Post({ data, className }: Props): React.Node {
   const seoProps = {
     title: frontmatter.title,
     metaTags: metaTags,
+    metaImagePath: frontmatter.hasMetaImage
+      ? `/meta${frontmatter.path}.jpg`
+      : null,
   }
   return (
     <StandardTemplate seoProps={seoProps} route="/words">
@@ -55,6 +57,7 @@ export const pageQuery: any = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        hasMetaImage
       }
       fields {
         readingTime {

@@ -21,9 +21,16 @@ export type Props = {|
   lang?: string,
   title?: string,
   metaTags?: Array<Meta>,
+  metaImagePath?: ?string,
 |}
 
-function SEO({ description = "", lang, title, metaTags }: Props): React.Node {
+function SEO({
+  description = "",
+  lang,
+  title,
+  metaTags,
+  metaImagePath,
+}: Props): React.Node {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -58,6 +65,14 @@ function SEO({ description = "", lang, title, metaTags }: Props): React.Node {
       <meta name="twitter:creator" content={site.siteMetadata.author} />
       <meta name="twitter:title" content={metaTitle} />
       <meta name="twitter:description" content={metaDescription} />
+      {metaImagePath &&
+        ["twitter:image", "og:image"].map(name => (
+          <meta
+            key={name}
+            name={name}
+            content={window.location.origin + metaImagePath}
+          />
+        ))}
       {metaTags && metaTags.map((meta, idx) => <meta {...meta} key={idx} />)}
     </Helmet>
   )
