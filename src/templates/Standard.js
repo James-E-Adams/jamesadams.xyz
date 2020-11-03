@@ -2,10 +2,9 @@
 
 import * as React from "react"
 import classnames from "classnames"
-import SEO from "src/components/seo"
+import SEO, { type Props as SEOProps } from "src/components/seo"
 import Header from "src/components/Header"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
 import "src/styles/base.css"
 import "src/styles/reset.css"
 import "src/lib/fontAwesome"
@@ -14,7 +13,7 @@ type Props = {|
   +className?: string,
   +children?: React.Node,
   +route?: string,
-  +seoProps?: {},
+  +seoProps?: SEOProps,
 |}
 
 const { useState } = React

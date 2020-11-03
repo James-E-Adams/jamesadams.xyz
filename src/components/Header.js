@@ -23,6 +23,7 @@ function Link({
 }: Props) {
   return (
     <div className="flex justify-center items-center pr-8">
+      {/* $FlowFixMe too lazy to fix this if I'm not getting paid for it */}
       <Component
         className={classnames(
           "font-semibold text-lg flex items-center",

@@ -10,21 +10,21 @@ type Props = {|
   +className?: string,
 |}
 
-function Link({ className, children, ...props }) {
+function Link({ className, children, ...props }: React.ElementConfig<"a">) {
   return (
     <a
+      {...props}
       target="_blank"
       rel="noopener noreferrer"
       className={classnames("font-bold", className)}
-      {...props}
     >
       {children}
     </a>
   )
 }
 
-function NestedListItem({ className, ...props }) {
-  return <li className={classnames("mb-10", className)} {...props} />
+function NestedListItem({ className, ...props }: React.ElementConfig<"li">) {
+  return <li {...props} className={classnames("mb-10", className)} />
 }
 
 function Projects({ className }: Props): React.Node {

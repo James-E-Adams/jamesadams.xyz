@@ -12,7 +12,7 @@ import { enableImagePreviews } from "src/lib/config"
 import { string } from "prop-types"
 type Props = {|
   +className?: string,
-  +item?: Item,
+  +item: Item,
 |}
 
 const linkFromName = name => `/menu/dish/${name.replace(/\s/gi, "-")}`

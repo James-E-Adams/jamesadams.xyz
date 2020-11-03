@@ -19,7 +19,7 @@ const getDeviceConfig = width => {
   }
 }
 
-const useBreakpoint = () => {
+function useBreakpoint(): ?string {
   const [breakpoint, setBreakpoint] = useState(null) // important so you don't get a weird flash at the start
 
   useEffect(() => {
@@ -36,5 +36,5 @@ const useBreakpoint = () => {
   return breakpoint
 }
 
-export const useIsMobile = () => useBreakpoint() === "xs"
+export const useIsMobile: () => boolean = () => useBreakpoint() === "xs"
 export default useBreakpoint

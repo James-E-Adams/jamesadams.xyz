@@ -3,8 +3,8 @@ import * as React from "react"
 
 import type { Item } from "src/types/menu"
 type ItemContextData = {|
-  +item: Item,
-  +setItem: (item: Item) => void,
+  +item: ?Item,
+  +setItem: (item: ?Item) => void,
 |}
 
 const defaultValues = {
@@ -14,7 +14,9 @@ const defaultValues = {
   },
 }
 
-export const ItemContext = React.createContext<ItemContextData>(defaultValues)
+export const ItemContext: React.Context<ItemContextData> = React.createContext<ItemContextData>(
+  defaultValues
+)
 
 export function useItemContext(): ItemContextData {
   return React.useContext(ItemContext)

@@ -8,18 +8,11 @@ import Source from "./Source"
 import { useIsMobile } from "src/lib/hooks/useBreakpoint"
 type Props = {|
   +className?: string,
-  +item?: Item,
+  +item: Item,
 |}
 
 function FullScreenItem({ className, item }: Props): React.Node {
-  const {
-    name,
-    description,
-    time,
-    ingredients,
-    instructions,
-    // image
-  } = item
+  const { name, description, time, ingredients, instructions, image } = item
   const isMobile = useIsMobile()
 
   return (
@@ -37,10 +30,10 @@ function FullScreenItem({ className, item }: Props): React.Node {
         className="px-8 sm:py-16 pt-4 overflow-scroll"
         style={isMobile ? { minHeight: "100vh" } : { height: 800 }}
       >
-        {Boolean(item.image && isMobile) && (
+        {Boolean(image && isMobile) && (
           <div className="py-4">
             <img
-              src={`/food/${item.image}`}
+              src={image ? `/food/${image}` : ""}
               alt={item.title}
               style={{ width: 500 }}
             />
@@ -74,10 +67,10 @@ function FullScreenItem({ className, item }: Props): React.Node {
             </div>
           )}
         </div>
-        {Boolean(item.image && !isMobile) && (
+        {Boolean(image && !isMobile) && (
           <div className="mt-16">
             <img
-              src={`/food/${item.image}`}
+              src={image ? `/food/${image}` : ""}
               alt={item.title}
               style={{ width: 500 }}
             />

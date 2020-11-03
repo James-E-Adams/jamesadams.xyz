@@ -1,11 +1,13 @@
 // @flow
 
+import { string } from "prop-types"
 import * as React from "react"
 // import classnames from "classnames"
 import type { Item } from "src/types/menu"
 import Source from "./Source"
 type Props = {|
-  +item?: Item,
+  +className: string,
+  +item: Item,
 |}
 
 function EventItem({ className, item }: Props): React.Node {
@@ -24,7 +26,7 @@ function EventItem({ className, item }: Props): React.Node {
           <div className="mt-2"> Takes {time} to cook. </div>
           <Source source={source} className="mt-16" />
         </div>
-        {item.image && (
+        {image && (
           <div>
             <img src={`/food/${image}`} alt={name} style={{ width: 500 }} />
           </div>

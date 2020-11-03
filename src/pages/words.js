@@ -8,7 +8,7 @@ import ContentContainer from "../components/ContentContainer"
 
 type Props = {|
   +className?: string,
-  data: {},
+  data: any,
 |}
 
 function Post({ data, className }: Props): React.Node {
@@ -57,7 +57,7 @@ function Post({ data, className }: Props): React.Node {
   )
 }
 
-export const pageQuery = graphql`
+export const pageQuery: any = graphql`
   {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {

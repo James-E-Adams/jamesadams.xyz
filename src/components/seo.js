@@ -16,11 +16,11 @@ type Meta = {
   content: string,
 }
 
-type Props = {|
-  description: string,
-  lang: string,
-  title: string,
-  metaTags: Array<Meta>,
+export type Props = {|
+  description?: string,
+  lang?: string,
+  title?: string,
+  metaTags?: Array<Meta>,
 |}
 
 function SEO({ description = "", lang, title, metaTags }: Props): React.Node {
@@ -46,7 +46,7 @@ function SEO({ description = "", lang, title, metaTags }: Props): React.Node {
   return (
     <Helmet
       htmlAttributes={{
-        lang: "en",
+        lang: lang || "en",
       }}
     >
       <title>{metaTitle}</title>
@@ -58,9 +58,7 @@ function SEO({ description = "", lang, title, metaTags }: Props): React.Node {
       <meta name="twitter:creator" content={site.siteMetadata.author} />
       <meta name="twitter:title" content={metaTitle} />
       <meta name="twitter:description" content={metaDescription} />
-      {metaTags.map((meta, idx) => (
-        <meta {...meta} key={idx} />
-      ))}
+      {metaTags && metaTags.map((meta, idx) => <meta {...meta} key={idx} />)}
     </Helmet>
   )
 }

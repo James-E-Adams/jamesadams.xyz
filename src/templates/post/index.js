@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import StandardTemplate from "../Standard"
 
 type Props = {|
+  +data: any,
   +className?: string,
 |}
 
@@ -14,8 +15,8 @@ function Post({ data, className }: Props): React.Node {
   const { frontmatter, html, fields } = markdownRemark
 
   const metaTags = [
-    { name: "twitter:label1", value: "Reading Time" },
-    { name: "twitter:data1", value: fields.readingTime.text },
+    { name: "twitter:label1", content: "Reading Time" },
+    { name: "twitter:data1", content: fields.readingTime.text },
   ]
   const seoProps = {
     title: frontmatter.title,
@@ -46,7 +47,7 @@ function Post({ data, className }: Props): React.Node {
   )
 }
 
-export const pageQuery = graphql`
+export const pageQuery: any = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
