@@ -26,6 +26,7 @@
     "gatsby-remark-images": "^3.3.19",
     "gatsby-remark-reading-time": "^1.1.0",
     "gatsby-remark-soundcloud": "^1.0.3",
+    "gatsby-remark-strava": "^1.2.0",
     "gatsby-remark-vscode": "^3.0.1",
     "gatsby-source-filesystem": "^2.3.1",
     "gatsby-transformer-remark": "^2.8.25",

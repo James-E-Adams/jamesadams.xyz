@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: "James Adams",
@@ -18,6 +20,7 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 590,
+              showCaptions: true,
             },
           },
           {
@@ -40,6 +43,14 @@ module.exports = {
             },
           },
           "gatsby-remark-reading-time",
+          {
+            resolve: "gatsby-remark-strava",
+            options: {
+              stravaClientId: process.env.STRAVA_CLIENT_ID,
+              stravaClientSecret: process.env.STRAVA_CLIENT_SECRET,
+              stravaToken: process.env.STRAVA_TOKEN,
+            },
+          },
         ],
       },
     },
