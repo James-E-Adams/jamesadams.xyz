@@ -597,3 +597,10 @@ tt:after {
     font-size: 100%;
   }
 }
+
+.gatsby-resp-image-figcaption {
+  @apply text-gray-800;
+  @apply text-sm;
+  @apply font-bold;
+  text-align: center;
+}
