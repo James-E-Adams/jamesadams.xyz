@@ -23,7 +23,7 @@ function Post({ data, className }: Props): React.Node {
     metaTags: metaTags,
     metaImagePath: frontmatter.hasMetaImage
       ? `/meta${frontmatter.path}.jpg`
-      : null,
+      : `/meta/words/me.jpg`,
   }
   return (
     <StandardTemplate seoProps={seoProps} route="/words">
