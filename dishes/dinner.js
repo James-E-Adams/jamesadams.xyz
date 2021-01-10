@@ -125,10 +125,23 @@ module.exports = [
     id: 16,
     name: "Fried tofu cubes",
     description:
-      "Our most popular entree. Stolen from NZ Nicole. Salt, oil and chili.",
+      "Our most popular entree. Stolen from NZ Nicole. Salt, oil and chili. That picture isn't very glamourous but I assure you, they're delicious.",
     time: "30 minutes",
     source: "Our friend, Nicole.",
     image: "fried-tofu.jpg",
+    instructions: [
+      "Drain the tofu from the package, and squash between some plates and paper towel to remove excess water. The drier the tofu, the easier it's going to be to coat and fry.",
+      "After the tofu has been sitting for 10-20 minutes between the plates and towel, cut into 3-4cm cubes. You can go bigger if feeling lazy.",
+      "Prepare a plastic bag/bowl with some corn starch mixed with a bit of salt and white pepper to taste - and coat all the tofu. I usually do it in a bag with all the tofu and then shake it around, trying not to break up the cubes. You'll pretty quickly work out the right quantity of corn starch, but start with 2tbsp and if it's not enough to coat all the tofu, add more.",
+      "Shallow pan fry, rotating often until they're golden brown all over. Serve immediately with some kind of dipping sauce.",
+    ],
+    ingredients: [
+      "A packet of firm tofu (ez mode) or a slightly softer tofu (hard mode).",
+      "Salt/White Pepper",
+      "Corn Starch",
+      "Dipping sauce: Any combo of soy sauce/chilli will work.",
+      "Some kind of frying oil - sunflower/vegetable/canola all work.",
+    ],
   },
   {
     id: 17,
