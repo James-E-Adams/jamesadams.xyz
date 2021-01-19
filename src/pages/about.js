@@ -18,11 +18,14 @@ function About() {
           <Me className="rounded-full w-32 border-solid border-red-800 border-4" />
         </div>
         <div className="text-4xl text-center">Hi I'm James! </div>
+        <div className="mt-8 text-lg">
+          I'm a <span className="line-through">software engineer</span> {"  "}
+          <span className="font-bold">human</span> in Melbourne, Australia.
+        </div>
         <div className="text-lg">
           <div className="mt-8">
-            Probably about time I had somewhere on the internet to live.
+            This is my little slice of the internet. Shock horror, I
           </div>
-          <div className="mt-2 text-center">Where I own the content and </div>
           <div className="mt-8 flex justify-center items-center">
             <span className="text-green-500"> control </span>{" "}
             <div className="mx-8 transform rotate-45">
@@ -32,14 +35,8 @@ function About() {
               <span className="text-5xl text-blue-400"> CSS.</span>
             </div>
           </div>
-          <div className="mt-12">
-            <div>
-              I'm a <span className="line-through">software engineer</span>{" "}
-              {"  "}
-              <span className="font-bold">human</span>{" "}
-            </div>{" "}
-            <div className="mb-6">from not-so-sunny Melbourne, Australia. </div>
-            <div>
+          <div className="mt-12 leading-10">
+            <div className="leading-10">
               I’ve spent most of my career pigeon-holed inside a browser,
               digging my way out with varying degrees of success - mostly in the
               direction of native apps. Nowadays, I work with the lovely people
@@ -64,8 +61,9 @@ function About() {
               .
             </div>
           </div>
+
           <div className="mt-12">
-            When I'm not frowning at computers, you can find me:
+            When I'm not frowning at computers, try looking for me:
             <ul className="list-inside list-disc pt-4">
               {hobbies.map((hobby, index) => (
                 <li key={index}>{hobby}</li>
@@ -83,7 +81,9 @@ function About() {
             </a>
             .
           </div>
-          <div className="mt-12">Elsewhere on the internet:</div>
+          <div className="mt-12">
+            You can find me chasing internet points in a few other places:
+          </div>
           <ul className="list-inside list-disc pt-4">
             <li>
               <a
