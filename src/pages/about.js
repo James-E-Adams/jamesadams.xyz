@@ -3,7 +3,9 @@ import * as React from "react"
 import StandardTemplate from "src/templates/Standard"
 import ContentContainer from "../components/ContentContainer"
 import Me from "src/components/Me"
+
 const hobbies = [
+  "surfing",
   "climbing rocks of varying sizes, colours and types",
   "pedalling away my existential angst on a mountain bike",
   "starting my journey to chess prodigy 20 years late",
@@ -37,26 +39,15 @@ function About() {
           </div>
           <div className="mt-12 leading-10">
             <div className="leading-10">
-              I’ve spent most of my career pigeon-holed inside a browser,
-              digging my way out with varying degrees of success - mostly in the
-              direction of native apps. Nowadays, I work with the lovely people
+              Nowadays, I work with the lovely people
               at{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://ferocia.com.au"
-                className="hover:text-ferociaPurple"
+                href="https://cash.app"
+                className="hover:text-cashGreen"
               >
-                Ferocia
-              </a>{" "}
-              on{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://up.com.au"
-                className="hover:text-upOrange"
-              >
-                Up Bank
+                Cash App
               </a>
               .
             </div>
@@ -71,7 +62,7 @@ function About() {
             </ul>
           </div>
           <div className="mt-8">
-            Feel free to say hello at{" "}
+            Feel free to drop me a line at{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"

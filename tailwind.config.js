@@ -13,9 +13,9 @@ module.exports = {
     },
     extend: {
       colors: {
-        upOrange: "#ff7a64",
-        ferociaPurple: "#ba33f4",
+        cashGreen: "#00d54b",
       },
+      fontWeight: ['hover']
     },
   },
   variants: {},
