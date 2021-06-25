@@ -39,8 +39,7 @@ function About() {
           </div>
           <div className="mt-12 leading-10">
             <div className="leading-10">
-              Nowadays, I work with the lovely people
-              at{" "}
+              Nowadays, I work with the lovely people at{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"

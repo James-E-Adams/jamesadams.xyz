@@ -8,7 +8,6 @@ hasMetaImage: true
 
 This is a highly subjective collection of thoughts I have on how software should be built, and on the teams that do it. It's non-exhaustive and subject to change according to whim, time and heat. Moreover, it will likely evolve as I (ideally) learn and grow as an engineer and human. If something resonates or you strongly disagree - [**reach out**](https://twitter.com/@jamesadams0)! I'd love to know why.
 
-
 - The location of buttons shouldn't change as your page loads. On first contentful paint, if a button/other clickable element renders in some position, it shouldn't jump around when CSS/JS is finally parsed and executed. Likewise in mobile apps. This is shockingly ubiquitous across technology and it baffles me! I hate clicking on the wrong thing!
 - Spending time on reducing bundle size on apps that are not public-facing or targetting mainly mobile users can be a premature optimisation trap. Obviously lots of caveats to this, especially with low hanging fruit, but it's certainly something a lot of people happily spend time on before they have paying customers.
 - Similarly with overoptimising db queries.

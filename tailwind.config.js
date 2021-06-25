@@ -15,7 +15,7 @@ module.exports = {
       colors: {
         cashGreen: "#00d54b",
       },
-      fontWeight: ['hover']
+      fontWeight: ["hover"],
     },
   },
   variants: {},
