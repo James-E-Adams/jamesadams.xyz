@@ -65,7 +65,13 @@ function Circles(): React.Node {
     p5.circle(center.x, center.y - radius + newRadius, newRadius * 2)
   }
 
-  if (!isBrowser) return <a style={{ width: 100, height: 100 }} />
+  if (!isBrowser)
+    return (
+      <a
+        style={{ width: 100, height: 100 }}
+        href="https://github.com/James-E-Adams/jamesadams.xyz/blob/master/src/components/Circles.js"
+      />
+    )
 
   return (
     <a href="https://github.com/James-E-Adams/jamesadams.xyz/blob/master/src/components/Circles.js">
