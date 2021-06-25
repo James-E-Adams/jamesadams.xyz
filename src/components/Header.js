@@ -5,7 +5,7 @@ import * as React from "react"
 import { Link as BaseLink } from "gatsby"
 import classnames from "classnames"
 import ChefSvg from "src/components/menu/assets/cooking_dark.inline.svg"
-
+import Circles from "./Circles"
 type Props = {|
   +className?: string,
   +to?: string,
@@ -41,10 +41,11 @@ function Header({ className, currentRoute }: Props): React.Node {
   return (
     <div
       className={classnames(
-        "flex h-20 pl-4 overflow-auto border-b md:border-none relative",
+        "flex h-20 overflow-auto border-b md:border-none relative items-center",
         className
       )}
     >
+      <Circles />
       <Link component="div" currentRoute={currentRoute}>
         James
       </Link>
