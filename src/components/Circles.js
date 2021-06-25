@@ -63,7 +63,7 @@ function Circles(): React.Node {
   }
 
   return (
-    <a href="https://github.com/James-E-Adams/jamesadams.xyz">
+    <a href="https://github.com/James-E-Adams/jamesadams.xyz/blob/master/src/components/Circles.js">
       <Sketch setup={setup} draw={draw} />
     </a>
   )
