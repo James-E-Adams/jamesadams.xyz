@@ -21,6 +21,9 @@ function equilateralTriangle(p5, startingPointX, startingPointY, length) {
 
 const SIZE = 100
 
+// Check if window is defined (so if in the browser or in node.js).
+const isBrowser = typeof window !== "undefined"
+
 function Circles(): React.Node {
   const setup = (p5, canvasParentRef) => {
     // use parent to render the canvas in this ref
@@ -61,6 +64,8 @@ function Circles(): React.Node {
     p5.circle(center.x, center.y + radius - newRadius, newRadius * 2)
     p5.circle(center.x, center.y - radius + newRadius, newRadius * 2)
   }
+
+  if (!isBrowser) return null
 
   return (
     <a href="https://github.com/James-E-Adams/jamesadams.xyz/blob/master/src/components/Circles.js">
