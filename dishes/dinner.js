@@ -111,6 +111,25 @@ module.exports = [
     description:
       "On first eating it, James asked 'Who knew you could cook seafood at home?'. Delicious.",
     source: phoebe,
+    instructions: [
+      "Deshell and detail the prawns - devein if you can be bothered.",
+      "1 hour before cooking, marinate in salt, white pepper, sesame oil and sugar.",
+      "Heat up pan to high heat and add prawns. Don't move them around too much.",
+      "When they are 70% done, add garlic and ginger and turn heat down to medium.",
+      "When they are 90% done, add oyster sauce + ketchup.",
+      "When they are practically done, garnish and turn off the heat. ",
+    ],
+    ingredients: [
+      "prawns",
+      "oyster sauce + ketchup (50%, 50%)",
+      "white pepper",
+      "cooking wine",
+      "sesame oil",
+      "coriander + spring onion to garnish",
+      "garlic + ginger",
+      "sugar",
+    ],
+    image: "prawns.jpg",
     time: "20 minutes",
   },
   {
