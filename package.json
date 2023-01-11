@@ -29,7 +29,7 @@
     "gatsby-remark-strava": "^1.2.0",
     "gatsby-remark-vscode": "^3.0.1",
     "gatsby-source-filesystem": "^2.3.1",
-    "gatsby-transformer-remark": "^2.8.25",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.5.2",
     "lodash": "^4.17.19",
     "prop-types": "^15.7.2",
